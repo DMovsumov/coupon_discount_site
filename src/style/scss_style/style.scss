@@ -1,3 +1,33 @@
-h1 {
-  color: blue;
+@import "./header.scss";
+@import "./main.scss";
+
+
+body {
+    @include font($main-font, 14px, 400, normal, $text-color, 26.99px);
+    color: $body-color;
+    max-width: 100%;
+    
+    margin-left: 130px;
+    margin-right: 130px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.link {
+    text-decoration: none;
+    color: #717171;
+
+    &:hover {
+        color: #00b600;
+    }
+}
+
+.fa-icon {
+    font-size: 4ex;
+    text-decoration: none;
+    color: $fa-icon-color;
 }

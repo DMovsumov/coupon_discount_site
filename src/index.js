@@ -1,5 +1,6 @@
-import './style/style.css'
+// import './style/style.css'
 import './style/scss_style/style.scss'
 
-console.log('start')
-console.log('est')
+// const logo = require('./assets/logo.png')
+
+console.log('')

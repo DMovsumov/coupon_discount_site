@@ -1,0 +1,190 @@
+@import "../_mixins/vars.scss";
+@import "../_mixins/font-face";
+@import "../_mixins/font";
+
+
+
+.header {
+    // color: $header-color;
+    // height: 200px;
+    max-width: 100%;
+        
+    .header-top {
+        display: flex;
+        justify-content: flex-end;
+         
+        a {
+            padding-left: 50px;
+        }
+
+        .header_top-nav_link {
+            color: #717171;
+            
+            &:hover{
+                color: #00b600;
+            }
+        }
+        
+    }
+
+    .header-main {
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+
+        .header-left {
+            color: $text-color;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            
+            .logo_image {
+                background-image: url('../../assets/logo.png');
+                height: 75px;
+                width: 75px;
+                background-size: cover;                
+            }
+
+            .logo_text_name {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: column;
+
+                a {
+                    text-decoration: none;
+                    @include font($font-logo, 30px, 400, normal, $color-logo-text, 26.99px);
+                }
+                
+                .logo_text_desc {
+                    @include font($font-logo, 12px, 600, normal, $text-color, 26.99px);
+                }
+                
+            }
+
+            
+        }
+
+        .header-right {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            // width: 80%;
+
+            .header-search_form {
+                width: 300px;
+                height: 50px;
+
+                position: relative;
+                width: 300px;
+                margin: 0 auto;
+                
+                margin-right: 250px;
+
+                .search_icon {
+                    font-size: 4ex;
+                    position: absolute;                    
+                    right: 30;
+                    width: 42px;
+                    height: 50px;
+                    border: none;
+                    background: $search-button;
+                    border-radius: 5px 0px 0px 5px;
+                    cursor: pointer;
+                    color: $bg-color-search;
+                }
+                
+
+                .search {
+                    font-size: 15px;
+                    width: 500px;
+                    height: 50px;                    
+
+                    padding-left: 50px;
+                    border: 2px solid $search-button;
+                    border-radius: 5px;
+                    outline: none;
+                    background: $search-button;
+                }
+            }
+        
+        }
+
+        .fa{
+            margin-right: 30px;
+
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+
+    .header-nav {
+        margin-top: 20px;
+        padding: 25px 0;
+        border-top: 1px solid $nav-color;
+        // border-radius: 10px;
+
+        display: flex;
+        justify-content: space-evenly;
+
+
+        .header-nav_link {
+
+            padding: 5px 5px 5px 5px;
+            border: 1px solid $nav-color;
+            border-radius: 15px;
+            background-color: $nav-color;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+
+            .header-nav-icon {                
+                width: 30px;
+                height: 30px;
+                background-size: cover;
+            }            
+
+            .header-nav_name {
+                font-size: 15px;
+            }
+
+            .icon_cashback {
+                background-image: url('../../assets/cashback.png');
+            }
+
+            .icon_all {
+                background-image: url('../../assets/all.png');
+            }
+
+            .icon_electronic {
+                background-image: url('../../assets/elcectronic.png');
+            }
+
+            .icon_play {
+                background-image: url('../../assets/play.png');
+            }
+
+            .icon_finance {
+                background-image: url('../../assets/finance.png');
+            }
+
+            .icon_travel {
+                background-image: url('../../assets/travel.png');
+            }
+
+            .icon_goods{
+                background-image: url('../../assets/goods.png');
+            }
+            .icon_service {
+                background-image: url('../../assets/service.png');
+            }
+            .icon_online_shop {
+                background-image: url('../../assets/shop.png');
+            }
+            .icon_auto {
+                background-image: url('../../assets/auto.png');
+            }
+        }
+    }
+}
