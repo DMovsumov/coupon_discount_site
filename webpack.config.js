@@ -37,7 +37,7 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            title: 'Discount Site',
+            title: 'Halyavavsem',
             template: './src/index.html'
         }),
         new CleanWebpackPlugin(),

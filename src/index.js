@@ -1,4 +1,3 @@
-// import './style/style.css'
 import './style/scss_style/style.scss'
 
 // const logo = require('./assets/logo.png')

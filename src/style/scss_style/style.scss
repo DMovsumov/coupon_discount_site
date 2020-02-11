@@ -1,14 +1,19 @@
 @import "./header.scss";
-@import "./main.scss";
+@import "./section_top.scss";
+@import "./section_main.scss";
+@import "./footer.scss";
+@import "../_mixins/vars.scss";
+@import "../_mixins/font";
 
 
 body {
-    @include font($main-font, 14px, 400, normal, $text-color, 26.99px);
-    color: $body-color;
+    @include font(14px, 400, normal, $text-color, 26.99px);
+    font-family: $main-font;
+    background-color: $body-color;
     max-width: 100%;
     
-    margin-left: 130px;
-    margin-right: 130px;
+    // margin-left: 150px;
+    // margin-right: 150px;
 }
 
 * {
@@ -30,4 +35,11 @@ body {
     font-size: 4ex;
     text-decoration: none;
     color: $fa-icon-color;
+}
+
+.logo_image {
+    background-image: url('../../assets/logo.png');
+    height: 75px;
+    width: 75px;
+    background-size: cover;                
 }

@@ -1,0 +1,162 @@
+.footer {
+    padding: 0 150px;
+    background-color: $footer-color;
+
+    .footer_advantages{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        // height: 200px;
+        padding: 20px 0;
+
+        
+        .footer_economy, .footer_sale-offers, .footer_private-information, .footer_free-coupons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            text-align: center;
+            
+            
+
+            .footer_advanteges-text{
+                width: 170px;
+                color: $footer-text-color_link;
+                font-size: 15px;
+
+                strong {
+                    font-size: 25px;
+                    
+                }
+            }
+        }
+
+    }
+
+    .footer_socials{
+        border-top: 1px solid $footer_border_color;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+        .footer_social_block {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+
+            .footer_logo {
+                display: flex;
+                align-items: flex-end;
+                // border-bottom: 1px solid $footer_border_color;
+                padding-bottom: 20px;
+
+                .footer_logo_text_name {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    flex-direction: column;
+
+                    a {
+                        text-decoration: none;
+                        font-family: $font-logo;
+                        @include font(30px, 400, normal, $color-logo-text, 26.99px);
+                        color: $footer-text-color_link;
+                    }
+                
+                    .logo_text_desc {
+                        @include font(12px, 600, normal, $text-color, 26.99px);
+                    }
+                }
+
+               
+            }
+
+            .footer_socials_icons {
+                display: flex;
+                border-top: 1px solid $footer_border_color;
+                padding-top: 20px;
+            }
+
+        }
+
+        .footer_company{
+            .footer_aboutus {
+                margin-bottom: 10px;
+            } 
+
+            a {
+                text-decoration: none;
+                font-size: 25px;
+                color: $footer-text-color_link;
+            }
+            
+        }
+
+        .footer_helps{
+            max-width: 400px;
+
+            h1 {
+                color: $footer-text-color_link;
+            }
+
+            .footer_hepls_coupon, .footer_helps_action {
+                margin-top: 20px;
+                h2 {
+                    margin-bottom: 10px;
+                }
+
+                h2, span {
+                    color: $footer-text-color_link;
+                }
+
+                span {
+                    font-size: 17px;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+
+    .footer_icon {
+        background-size: cover;
+        height: 100px;
+        width: 100px;
+        padding-right: 70px;
+    }
+
+    .icon_economy {
+        background-image: url('../../assets/icon_economy.png');
+    }
+
+    .icon_sale-offers{
+        background-image: url('../../assets/icon_sale-offers.png');
+    }
+    .icon_private-information{
+        background-image: url('../../assets/icon_private-information.png');
+    }
+    .icon_free-coupons{
+        background-image: url('../../assets/icon_free-coupon.png');
+    }
+
+    .icon_wk {
+        background-image: url('../../assets/icon_wk.png');
+
+    }
+    .icon_instagram{
+        background-image: url('../../assets/icon_instagram.png');
+    }
+    .icon_twitter{
+        background-image: url('../../assets/icon_twitter.png');
+    }
+    .icon_yandex_dzen{
+        background-image: url('http://cache-mskstoredata02.cdn.yandex.net/download.cdn.yandex.net/from/yandex.ru/support/ru/zen/files/zen-icon.svg');
+    }
+
+    .icon_wk, .icon_instagram, .icon_twitter, .icon_yandex_dzen {
+        background-size: cover;
+        height: 50px;
+        width: 50px;
+        margin-right: 10px;
+    }
+}

@@ -1,8 +1,7 @@
 //Body
-$main-font: 'Open-Sans';
-$body-color: #535753;
+$main-font: 'Open Sans', cursive;
+$body-color: #eff0f1;
 $text-color: #717171;
-
 
 //Header
 $header-color: #ffffff;
@@ -10,9 +9,28 @@ $text-color: #717171;
 $search-button: #ededed;
 $bg-color-search: #c0c0c0;
 
-$font-logo: 'BebasNeue-Regular';
+$font-logo: 'Bebas Neue', sans-serif;// 'Vast Shadow', cursive;
 $color-logo-text: rgba(0,0,0,.9);
 
 $fa-icon-color: #bbbbbb;
 
 $nav-color: #eeeeeea6;
+
+
+//Main
+
+$bg-card: url('data:image/svg+xml,%3csvg%20xmlns="http://www.w3.org/2000/svg"%20viewBox="0%200%2060%2060"%20width="120"%20height="120"%3e%3cpath%20d="m%200%2010a10%2010%200%200%200%2010-10h40a10%2010%200%200%200%2010%2010v40a10%2010%200%200%200-10%2010h-40a10%2010%200%200%200-10-10z"%20fill="%23f5ffe7"%20fill-opacity=".6"/%3e%3cpath%20d="m5%2015a15%2015%200%200%200%2010-10h30a15%2015%200%200%200%2010%2010v30a15%2015%200%200%200-10%2010h-30a15%2015%200%200%200-10-10z"%20fill="none"%20stroke="%239A56FF"/%3e%3c/svg%3e');
+$bg-cheks: url('data:image/svg+xml,%3csvg%20xmlns="http://www.w3.org/2000/svg"%20viewBox="0%200%2060%2060"%20width="120"%20height="120"%3e%3cpath%20d="m%200%2010a10%2010%200%200%200%2010-10h40a10%2010%200%200%200%2010%2010v40a10%2010%200%200%200-10%2010h-40a10%2010%200%200%200-10-10z"%20fill="%23f5ffe7"%20fill-opacity=".6"/%3e%3cpath%20d="m5%2015a15%2015%200%200%200%2010-10h30a15%2015%200%200%200%2010%2010v30a15%2015%200%200%200-10%2010h-30a15%2015%200%200%200-10-10z"%20fill="none"%20stroke="%239A56FF"/%3e%3c/svg%3e');
+
+
+$type-onfo-color: #28374a;
+$color-bottom-style: #5752ff;
+
+
+// Footer 
+$footer-color: #343a40;
+$footer-text-color_link: #fff;
+
+$footer-text-color: #fcebeb;
+
+$footer_border_color: rgba(184, 176, 176, 0.2);
