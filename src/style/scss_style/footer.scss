@@ -94,7 +94,7 @@
         }
 
         .footer_helps{
-            max-width: 400px;
+            max-width: 450px;
 
             h1 {
                 color: $footer-text-color_link;
@@ -102,18 +102,15 @@
 
             .footer_hepls_coupon, .footer_helps_action {
                 margin-top: 20px;
-                h2 {
+                cursor: pointer;
+                summary {
                     margin-bottom: 10px;
+                    font-style: normal;
                 }
-
-                h2, span {
-                    color: $footer-text-color_link;
-                }
-
-                span {
-                    font-size: 17px;
-                    font-style: italic;
-                }
+                color: $footer-text-color_link;
+                font-size: 17px;
+                font-style: italic;
+                
             }
         }
     }
