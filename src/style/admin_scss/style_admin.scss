@@ -1,0 +1,16 @@
+@import './admin_vars';
+@import './admin_header';
+@import './mixin/font.scss';
+@import './main.scss';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $main-color;
+    @include font ($font-body, 14px, normal, $font-body-color, 400);
+}

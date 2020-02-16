@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SkidWood Панель Администратора</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header class="header">
+        <section class="header_admin">
+            <h1>Панель администратора</h1>
+            <div class="header_admin-info">
+                <span class="header_role">Администратор:</span>
+                <span class="header_name">Denioo</span>
+            </div>            
+        </section>
+        <section class="header_menu">
+            <a href="#" class="header_menu_btn" id="menu_btn">
+                <div class="header_menu-arrow"></div>
+            </a>
+            <nav class="header_nav-list">
+                <a href="">SkidWood</a>
+                <a href="">SkidWood journal</a>
+                <a href="">Email</a>
+                <a href="">Добавить доступ</a>
+            </nav>
+        </section>
+    </header>
+    
+    <main class="main">
+        <section class="skidwood_site">
+            <header class="header_skidwood_site">
+                <nav class="header_skidwood_site-nav">
+                    <a href="">Добавить купон</a>
+                    <a href="">Удалить купон</a>
+                    <a href="">Добавить/удалить подборку</a>
+                    <a href="">Добавить/удалить категорию</a>
+                    <a href="">Изменить информацию на сайте</a>                    
+                </nav>
+            </header>
+        </section>
+
+        <section class="main_add-coupon">
+            <form action="" class="add_coupon_skidwood" id="form_add_coupon">
+                <input type="text" class="shop input" placeholder="Название магазина" minlength="2">                
+                <select name="type" class="type select_type" id="select_type">
+                    <option value="Акция">Акция</option>
+                    <option value="Купон">Купон</option>
+                </select>
+                <select name="type" class="category select_category" id="select_category">
+                    <option value="Техника">Техника</option>
+                    <option value="Развлечения">Развлечения</option>
+                    <option value="Финансы">Финансы</option>
+                    <option value="Путешествия">Путешествия</option>
+                    <option value="Товары">Товары</option>
+                    <option value="Услуги">Услуги</option>
+                    <option value="CashBack">CashBack</option>
+                    <option value="Онлайн магазины">Онлайн магазины</option>
+                    <option value="Авто">Авто</option>
+                    <option value="Обучение">Обучение</option>
+                    <option value="Еда">Еда</option>
+                    <option value="Спорт">Спорт</option>
+                    <option value="Азарт">Азарт</option>
+                    <option value="Для взрослых">Для взрослых</option>
+                </select>
+                <input type="text" class="promocode" id="promocode" placeholder="Введите промокод" disabled>
+                <input type="text" class="sub_сategory input" placeholder="Подкатегория купона" minlength="2">                
+                <select name="type" class="country select_country" id="select_country">
+                    <option value="Россия"><div class="icon_country icon_russia"></div> Россия</option>
+                    <option value="Украина">Украина</option>
+                    <option value="Украина">Беларусь</option>
+                    <option value="Украина">Казахстан</option>
+                </select>
+                <input type="url" class="url input" placeholder="Ссылка на сайт">
+                <input type="text" class="type_info input" placeholder="Краткая информация купона" minlength="2">                                
+                <input type="text" class="subdesc input" placeholder="Краткое описание купона" minlength="2">                                              
+                <textarea type="text" class="desc input" placeholder="Описание купона" name="" id="" cols="30" rows="10"></textarea>
+                <input type="date" name="" id="" class="date input">
+
+                <div class="skidwood_collections">
+                    <div class="skidwood_coll">
+                        <input type="checkbox" class="hot">
+                        <label for="hot">Горячие</label>
+                    </div>
+                    <div class="skidwood_coll">
+                        <input type="checkbox" class="only">
+                        <label for="hot">Только на SkidWood</label>
+                    </div>
+                    <div class="skidwood_coll">
+                        <input type="checkbox" class="isTrue">
+                        <label for="hot">Проверено!</label>
+                    </div>
+                </div>
+
+
+                <button type="submit" class="add_submit" id="submit_add" disabled>Добавить купон</button>
+            </form>
+            <div class="coupon_help"></div>
+        </section>
+    </main>
+    
+
+    <script src="https://kit.fontawesome.com/b06e20d485.js" crossorigin="anonymous"></script>
+</body>
+</html>

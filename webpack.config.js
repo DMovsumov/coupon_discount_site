@@ -26,7 +26,10 @@ const styleLoader = ext => {
 module.exports = {
     mode: 'development',
     entry: {
-        main: './src/index.js'
+        main: './src/index.js',
+        analitic: './src/JS/analitics/analitic.js',
+        admin: './src/JS/admin/admin.js',
+        admin_analitic: './src/JS/admin/admin_analitic.js'
     },
     output: {
         filename: '[name].[contenthash].js',
@@ -37,8 +40,15 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            title: 'Halyavavsem',
-            template: './src/index.html'
+            title: 'SkidWood',
+            template: './src/index.html',
+            chunks: ['main', 'analitic']
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'admin',
+            title: 'Admin Panel',
+            template: './src/admin.html',
+            chunks: ['admin', 'admin_analitic']
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
