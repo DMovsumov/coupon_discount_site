@@ -12,4 +12,12 @@ export class Coupon {
             console.log(response)
         })
     }
+
+    static loadCoupon() {
+        return fetch(`https://skidwood-5a4ed.firebaseio.com/coupon.json`)
+        .then(response => response)
+        .then(data => {
+            console.log(data)
+        })
+    }
 }

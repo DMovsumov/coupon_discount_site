@@ -37,7 +37,8 @@ function submitCoupon(event){
                 typeInfo: input[3].value,
                 subDesc: input[4].value,
                 desc: input[5].value,
-                date: input[6].value
+                date: input[6].value,
+                img: input[7].value
             }
             
             

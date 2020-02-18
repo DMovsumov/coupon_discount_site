@@ -1,0 +1,81 @@
+.main_delete_coupon {
+    background-color: #fff;
+    border-radius: 10px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 20px;
+
+    .main_delete_coupon_header {
+        width: 100%;
+        .sort_delete {
+            width: 100%;
+            padding: 15px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            select {
+                height: 30px;
+                border-radius: 5px;
+                width: 200px;
+                border: 2px solid $border-add-coupon;   
+            }
+
+            #search_sort {
+                font-size: 15px;
+                width: 500px;
+                height: 30px;                    
+
+                border: 2px solid $border-add-coupon;
+                border-radius: 5px;
+                outline: none;
+                // background: $search-button;
+            }
+
+            #submit_sort {
+                width: 150px;
+                height: 30px;
+                border-radius: 5px;
+                border: none;
+                background-color: $border-add-coupon;   
+            }
+
+            input {
+                margin-bottom: 10px;
+                height: 30px;
+                outline: none;
+                border: 2px solid $border-add-coupon;
+                background-color: $main-color;
+                border-radius: 5px; 
+            }
+        }
+    }
+
+    .main_delete_coupon_load {
+        margin-top: 30px;
+        width: 100%;
+
+        .mui-table {
+            border-radius: 5px;
+            #coupon_table {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                th {
+                    font-size: 15px;
+                    color: rgba(0,0,0,.87);
+                }
+            }
+            
+            background-color: #fff;
+        }
+       
+    }
+}

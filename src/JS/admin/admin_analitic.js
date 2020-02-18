@@ -1,6 +1,33 @@
 const selectType = document.getElementById('select_type')
 const promocode = document.getElementById('promocode')
 
+const skidwoodNav = document.querySelector('.header_skidwood_site-nav')
+const mainAddCoupon = document.querySelector('.main_add-coupon')
+const mainDeleteCoupon = document.querySelector('.main_delete_coupon')
+
+
+skidwoodNav.addEventListener('click', ShowSection)
+
+
+function ShowSection(e) {
+    e.preventDefault()
+    console.log(e.toElement.id)   
+
+    if(e.toElement.id == 'skidwood_add_coupon') {
+        showsEl(mainAddCoupon)
+        if(!mainDeleteCoupon.classList.contains('notShow')){
+            showsEl(mainDeleteCoupon)
+        }
+    } else if(e.toElement.id == 'skidwood_delete_coupon') {
+        showsEl(mainDeleteCoupon)
+        if(!mainAddCoupon.classList.contains('notShow')){
+            showsEl(mainAddCoupon)
+        }
+    }
+}
+
+
+// Появление поля при выборе промокода
 selectType.addEventListener('change', (e) => {
     e.preventDefault()
 
@@ -13,3 +40,12 @@ selectType.addEventListener('change', (e) => {
     }
     
 })
+
+//Показывает или скрывает элемент
+const showsEl = (section) => {
+    if(section.classList.contains('notShow')){
+        section.classList.remove('notShow')
+    } else if (section.classList.contains('notShow') == false){
+        section.classList.add('notShow')
+    }
+}
