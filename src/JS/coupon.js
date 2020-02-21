@@ -1,6 +1,6 @@
 export class Coupon {
     static create(coupon) {
-        return fetch('https://skidwood-5a4ed.firebaseio.com/coupon.json', {
+        return fetch(`https://skidwood-5a4ed.firebaseio.com/coupon.json`, {
             method: 'POST',
             body: JSON.stringify(coupon),
             headers: {
@@ -15,9 +15,7 @@ export class Coupon {
 
     static loadCoupon() {
         return fetch(`https://skidwood-5a4ed.firebaseio.com/coupon.json`)
-        .then(response => response)
-        .then(data => {
-            console.log(data)
-        })
+        .then(response => response.json())
+        .then(data => data)
     }
 }

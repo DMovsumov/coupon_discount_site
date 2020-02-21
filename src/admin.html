@@ -38,8 +38,7 @@
                 <nav class="header_skidwood_site-nav">
                     <a href="" id="skidwood_add_coupon">Добавить купон</a>
                     <a href="" id="skidwood_delete_coupon">Удалить купон</a>
-                    <a href="" id="skidwood_add_collections">Добавить/удалить подборку</a>
-                    <a href="" id="skidwood_add_category">Добавить/удалить категорию</a>
+                    <a href="" id="skidwood_add_collections">Добавить/удалить подборку/категорию</a>
                     <a href="" id="skidwood_rewrite">Изменить информацию на сайте</a>
                 </nav>
             </header>
@@ -105,7 +104,7 @@
                 <div class="coupon_help"></div>
             </section>
 
-            <section class="main_delete_coupon ">
+            <section class="main_delete_coupon notShow">
                 <header class="main_delete_coupon_header">
                     <form action="" class="sort_delete">
                         <select name="type" class="type select_type sort_type" id="select_type_sort">
@@ -145,9 +144,8 @@
                 </header>
 
                 <main class="main_delete_coupon_load">
-                    <table class="mui-table mui-table--bordered">
-                        <thead>
-                            <tr id="coupon_table">
+                    <table class="delete_load_table" id="delete_table">
+                            <tr class="coupon_table header_table">
                                 <th>#</th>
                                 <th>Страна</th>
                                 <th>Магазин</th>
@@ -160,7 +158,6 @@
                                 <th>Ссылка на магзин</th>
                                 <th>Дата действия</th>
                             </tr>
-                        </thead>
                     </table>
                 </main>
             </section>

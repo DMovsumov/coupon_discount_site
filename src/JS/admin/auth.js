@@ -1,3 +1,4 @@
+import { Coupon } from "../coupon"
 
 
 const modalLogin = document.createElement('div')
@@ -13,6 +14,8 @@ modalLogin.style.display = 'flex'
 modalLogin.style.alignItems = 'center'
 modalLogin.style.justifyContent = 'center'
 
+main.disabled = true
+
 export function LoginOnLoad() {
     main.insertAdjacentElement('afterbegin', modalLogin)
     modalLogin.insertAdjacentHTML('afterbegin', getAuthForm())
@@ -25,6 +28,10 @@ function getAuthForm() {
     <input type="password" name="" id="auth_password" placeholder="Пароль">
     <button type="submit" id="auth_submit">Войти</button>
     </form>`
+}
+
+function getNotAccess() {
+    return `<p class="error">У вас нет доступа</p>`
 }
 
 export function authWithEmailAndPassword(email, password) {
@@ -41,4 +48,12 @@ export function authWithEmailAndPassword(email, password) {
     })
     .then(response => response.json())
     .then(data => data.idToken)
+    .then(token => {
+        if(token){
+            modalLogin.style.display = 'none'
+            main.disabled = false
+        } else {
+            document.querySelector('.auth').insertAdjacentHTML('beforeEnd', getNotAccess())
+        }
+    })
 }

@@ -1,3 +1,5 @@
+import { DeleteCoupon } from "./delete_coupon"
+
 const selectType = document.getElementById('select_type')
 const promocode = document.getElementById('promocode')
 
@@ -20,6 +22,7 @@ function ShowSection(e) {
         }
     } else if(e.toElement.id == 'skidwood_delete_coupon') {
         showsEl(mainDeleteCoupon)
+        DeleteCoupon()
         if(!mainAddCoupon.classList.contains('notShow')){
             showsEl(mainAddCoupon)
         }

@@ -3,9 +3,9 @@ import * as Validation from './add_coupon'
 import { Coupon } from "../coupon";
 import { LoginOnLoad, authWithEmailAndPassword } from './auth';
 
-Coupon.loadCoupon()
+// Coupon.loadCoupon()
 
-window.addEventListener('load', openModal())
+// window.addEventListener('load', openModal())
 
 
 function openModal() {
@@ -20,7 +20,4 @@ function authFormLog(e) {
     const password = e.target.querySelector('#auth_password').value
 
     authWithEmailAndPassword(email, password)
-    .then(token => {
-        
-    })
 }

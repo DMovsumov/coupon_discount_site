@@ -61,20 +61,25 @@
         margin-top: 30px;
         width: 100%;
 
-        .mui-table {
-            border-radius: 5px;
-            #coupon_table {
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
+        .delete_load_table{
+            width: 100%;
 
+            .coupon_table {
+                background-color: #fff;
+                font-size: 16px;
+                color: $desc-color;
+                
                 th {
-                    font-size: 15px;
-                    color: rgba(0,0,0,.87);
+                    border-right: 1px solid $desc-color;
+                    width: 150px;
+                    text-align: center;
+                    padding: 10px 10px;
+
+                    &:last-child{
+                        border-right: none;
+                    }
                 }
             }
-            
-            background-color: #fff;
         }
        
     }
