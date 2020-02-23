@@ -1,3 +1,5 @@
+//Плагины, переключение вкладок...
+
 import { DeleteCoupon } from "./delete_coupon"
 
 const selectType = document.getElementById('select_type')

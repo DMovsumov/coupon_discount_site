@@ -68,7 +68,7 @@
                 background-color: #fff;
                 font-size: 16px;
                 color: $desc-color;
-                
+
                 th {
                     border-right: 1px solid $desc-color;
                     width: 150px;
@@ -82,5 +82,14 @@
             }
         }
        
+    }
+
+    .delete_btn {
+        cursor: pointer;
+        color: red;
+    }
+
+    .deleted {
+        text-decoration: line-through;
     }
 }
