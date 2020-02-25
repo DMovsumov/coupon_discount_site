@@ -46,7 +46,7 @@ selectType.addEventListener('change', (e) => {
     
 })
 
-//Показывает или скрывает элемент
+//Показывает или скрывает секцию
 const showsEl = (section) => {
     if(section.classList.contains('notShow')){
         section.classList.remove('notShow')
@@ -54,3 +54,13 @@ const showsEl = (section) => {
         section.classList.add('notShow')
     }
 }
+
+
+//Плагины для секции Удалить купон
+
+
+
+
+
+    
+

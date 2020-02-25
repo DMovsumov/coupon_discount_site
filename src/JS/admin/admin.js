@@ -5,7 +5,7 @@ import { LoginOnLoad, authWithEmailAndPassword } from './auth';
 
 // Coupon.loadCoupon()
 
-// window.addEventListener('load', openModal())
+window.addEventListener('load', openModal())
 
 
 function openModal() {
