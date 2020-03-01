@@ -1,4 +1,27 @@
 /// Баннеры, слайдеры, подборки и т.д.
 
 .section_top {
+    margin-left: 100px;
+    margin-right: 100px;
+
+    margin-bottom: 30px;
+    .glider-contain{
+        .glider_title {
+            margin-bottom: 1.5em;
+            text-align: center;
+        }
+
+        .glider_fire, .glider_top {            
+            // border: 1px solid #5752ff;
+            // box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.17);
+
+            .item_glider {
+                width: 200px;
+                background-color: #fff;
+                background-size: cover;
+                border: 1px solid $footer-color;
+                margin: 0 1px;
+            }
+        }
+    }
 }

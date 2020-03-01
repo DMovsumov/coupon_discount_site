@@ -4,6 +4,7 @@
 @import "./footer.scss";
 @import "../_mixins/vars.scss";
 @import "../_mixins/font";
+@import "./modal.scss";
 
 
 body {
@@ -42,4 +43,8 @@ body {
     height: 75px;
     width: 75px;
     background-size: cover;                
+}
+
+.notShow {
+    display: none;
 }

@@ -1,0 +1,103 @@
+.section_main_modal-coupon {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.8);
+    .modal_content {
+        background-color: rgb(255, 255, 255);
+        padding: 0 20px;
+        margin: 17% auto;
+        
+        border-radius: 8px;
+        width: 900px;
+        position: relative;
+
+        .close_modal {
+            position: absolute;
+            top: 0;
+            left: 96%;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        .modal_header {
+            display: flex;
+            justify-content: flex-start;
+            font-size: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            
+            border-bottom: 1px solid $modal-onfo-color;
+
+            .modal_type-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                background-color: $body-color;
+                height: 100px;
+                width: 100px;
+                border-radius: 5px;
+                margin-right: 40px;
+                margin-left: 50px;
+                // margin: 20px;
+
+                .modal_type-info-text {
+                    text-align: center;
+                    font-size: 25px;
+                    width: 110%;
+                    padding-top: 20px;
+                }
+
+                .modal_type-info-type {
+                    background-color: $modal-type-color;
+                    color: $header-color;
+                    padding: 5px;
+                    width: 120%;
+                    border-radius: 5px;
+                    text-align: center;
+                }
+                
+            }
+
+            .modal_info-coupon {
+                .modal_info-coupon-shop{
+                    font-size: 25px;
+                    color: $modal-onfo-color;
+                }
+                .modal_info-coupon-desc{
+                    margin-top: 10px;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .modal_main {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                font-size: 17px;
+                text-align: center;
+                padding: 0 100px;
+                color: black;
+                font-weight: 600;
+            }
+
+            .modal_main-link_coupon {
+                margin-top: 10px;
+                font-size: 25px;
+                background-color: $modal-type-color;
+                padding: 10px 150px;
+                border-radius: 6px;
+                margin-bottom: 20px;
+                text-decoration: none;
+                color: $footer-text-color_link;
+            }
+        }
+    }
+}
