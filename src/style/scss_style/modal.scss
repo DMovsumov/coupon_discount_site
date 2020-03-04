@@ -98,6 +98,50 @@
                 text-decoration: none;
                 color: $footer-text-color_link;
             }
+
+            .modal_promocode-main {
+                font-size: 40px;
+
+                background-color: $fa-icon-color;
+                margin: 10px 0;
+                .copy_promocode {
+                    font-size: 40px;
+                    background-color: $fa-icon-color;
+                    border: none;
+                    cursor: pointer;
+                    padding-left: 10px;
+                    border-radius: 3px;
+                    color: rgb(230, 81, 81);
+                }
+                .modal_promocode {
+                    font-size: 40px;
+                    text-align: center;
+                }
+            }
+        }
+
+        
+    }
+
+    .modal_accept {
+        background-color: $modal-accept-color;
+        color: $header-color;
+        font-size: 25px;
+
+        padding: 10px 20px;
+        margin: 42% auto;
+        position: fixed;
+        
+        border-radius: 8px;
+        width: 400px;
+        position: relative;
+
+        i {
+            margin-right: 5px;
         }
     }
+}
+
+.check_access {    
+    background-color: rgba(0, 0, 0, 0);
 }

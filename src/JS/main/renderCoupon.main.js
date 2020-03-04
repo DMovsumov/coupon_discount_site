@@ -1,5 +1,5 @@
 import { Coupon } from '../coupon'
-import { openModalCoupon } from '../analitics/openModalCoupons'
+import { openModalCoupon, removeModal, copyPromocode } from '../analitics/openModalCoupons'
 
 
 const mainCoupon = document.querySelector('.section_main')
@@ -51,7 +51,8 @@ function renderList(data) {
         const openModalBtn = document.querySelector('.open_info_coupon')
         openModalBtn.addEventListener('click', (e) => {
             e.preventDefault()
-            modalCoupon(mainCoupon, data[i].typeInfo, data[i].type, data[i].shop, data[i].desc, data[i].url)
+            modalCoupon(mainCoupon, data[i].typeInfo, data[i].type, data[i].shop, data[i].desc, data[i].url, 
+                data[i].promocode)
         })
     }
 }
@@ -78,8 +79,37 @@ function modalCoupon(...db){
             </section>
         </div>
         </div>`)
+        removeModal('.close_modal')
+    } else if(db[2] == 'Купон') {
+        db[0].insertAdjacentHTML('afterbegin', `<div class="section_main_modal-coupon">
+        <div class="modal_content">
+            <div class="close_modal">&times;</div>
+            <section class="modal_header">
+                <div class="modal_type-info">
+                    <div class="modal_type-info-text">${db[1]}</div>
+                    <div class="modal_type-info-type">${db[2]}</div>
+                    
+                </div>
+                <div class="modal_info-coupon">
+                    <div class="modal_info-coupon-shop">${db[3]}</div>
+                    <div class="modal_info-coupon-desc">${db[4]}</div>
+                </div>
+            </section>
+            <section class="modal_main">
+                <p>Скопируйте промокод ниже, или нажмите на кнопку копирования и он автоматический скопируется в ваш буфер обмена, затем перейдите на сайт и воспользуйтесь.</p>
+                <div class="modal_promocode-main">
+                    <button class="copy_promocode" type="submit"><i class="fas fa-copy"></i></button>
+                    <input type="text" class="modal_promocode" value="${db[6]}" readonly="readonly">
+                </div>
+                <a href="${db[5]}" class="modal_main-link_coupon" data-newWindow>Перейти на сайт</a>
+            </section>
+        </div>
+    </div>`)
+        removeModal('.close_modal')
+        copyPromocode('.copy_promocode', '.modal_promocode')
     }
 }
+
 
 const action = `<div class="section_main_modal-coupon">
 <div class="modal_content">
