@@ -5,6 +5,12 @@
 @import "../_mixins/vars.scss";
 @import "../_mixins/font";
 @import "./modal.scss";
+//Media
+@import "../media/media_header";
+@import "../media/media_section_top";
+@import "../media/media_section_main";
+@import "../media/media_footer";
+@import "../media/media_modal";
 
 
 body {

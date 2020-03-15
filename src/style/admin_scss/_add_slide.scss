@@ -1,0 +1,69 @@
+.main_add_slider {
+    margin-top: 30px;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .main_add_slider-form {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+
+        .input_slide {
+            margin-bottom: 10px;
+            height: 30px;
+            outline: none;
+            border: 2px solid $border-add-coupon;
+            background-color: $main-color;
+            border-radius: 5px;
+        }
+
+        #submit_slide {
+            align-self: center;
+            margin-top: 10px;
+            width: 150px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: $border-add-coupon;
+        }
+    }
+
+    .main_add_slider-all_slider {
+        padding: 20px;
+        border: 1px solid $desc-color;
+        border-radius: 10px;
+        width: 60%;
+
+        .delete_slider-table {
+            
+            .slide_table {
+                font-size: 16px;
+                color: $desc-color;
+                
+                th {
+                    border-right: 1px solid $desc-color;
+                    text-align: center;
+                    padding: 10px 10px;
+                    width: 200px;
+
+                    &:first-child{
+                        width: 75px;
+                    }
+
+                    &:last-child{
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+}

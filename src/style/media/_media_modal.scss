@@ -1,0 +1,66 @@
+@media (min-width: 768px) and (max-width: 991px) {
+    .section_main_modal-coupon {
+        .modal_content {
+            width: 700px;
+        }
+    }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .section_main_modal-coupon {
+        .modal_content {
+            width: 300px;
+
+            .modal_header {
+                display: flex;
+                justify-content: space-between;
+                font-size: 15px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+
+                .modal_type-info {
+                    margin-right: 20px;
+                    margin-left: 20px;
+                    width: 150px;
+                }
+            }
+
+            .close_modal {
+                left: 92%;
+                font-size: 40px;
+                cursor: pointer;
+            }
+
+            .modal_main {
+                p {
+                    font-size: 15px;
+                    padding: 10px;
+                }
+
+                .modal_main-link_coupon {
+                    padding: 10px 0;
+                    width: 280px;
+                    text-align: center;
+                }
+
+                .modal_promocode-main {
+                    font-size: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    .copy_promocode {
+                        font-size: 20px;
+                        background-color: $fa-icon-color;
+                        border: none;
+                        cursor: pointer;
+                        padding: 0 5px;
+                        border-radius: 3px;
+                        color: rgb(230, 81, 81);
+                    }
+                    .modal_promocode {
+                        font-size: 20px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

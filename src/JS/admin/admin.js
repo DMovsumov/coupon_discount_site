@@ -1,11 +1,12 @@
 import '../../style/admin_scss/style_admin.scss'
 import * as Validation from './add_coupon'
-import { Coupon } from "../coupon";
-import { LoginOnLoad, authWithEmailAndPassword } from './auth';
+import { Coupon } from "../coupon"
+import { LoginOnLoad, authWithEmailAndPassword } from './auth'
+import {addSlideToDb} from './add_slide'
 
 // Coupon.loadCoupon()
 
-window.addEventListener('load', openModal())
+// window.addEventListener('load', openModal())
 
 
 function openModal() {

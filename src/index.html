@@ -11,33 +11,54 @@
 <body>
     <header class="header">
         <div class="header-top">
+
+            <select class="header_country fa">
+                <option value="Россия" class="header_country_option">Россия</option>
+                <option value="Украина">Украина</option>
+                <option value="Казахстан">Казахстан</option>
+                <option value="Беларусь">Беларусь</option>
+            </select>
+
             <a href="#" class="header_top-nav_link link service">О сервисе</a>
             <a href="#" class="header_top-nav_link link partner">Стать партнером</a>
             <a href="#" class="header_top-nav_link link contacts">Контакты</a>
         </div>
+
         <div class="header-main">
             <div class="header-left">
                 <a href="" class="logo_image"></a>
-                <div class="logo_text_name"><a href="">SkidWood.ru</a><div class="logo_text_desc">Выгодные акции, бесплатные купоны и не только</div>
+                <div class="logo_text_name"><a href="">SkidWood.ru</a><span class="logo_text_desc">Выгодные акции, бесплатные купоны и не только</span>
             </div>
                 
             </div>
-            <but class="header-right">
+            <div class="header-right">
                 <form class="header-search_form">
                     <button class="search_icon" type="submit"><i class="fas fa-search-dollar"></i></button>
                     <div class="header-search"><input type="text" class="search" placeholder="Поиск выгодного предложения..."></div>
                 </form>
 
+                <div class="header_wrapper_fa">
+                <div class="header_journal fa">
+                    <a href="" class="fa-icon"><i class="far fa-newspaper"></i></a>
+                </div>
                 <div class="header_hotjar fa">
                     <a href="" class="fa-icon"><i class="fab fa-hotjar"></i></a>
                 </div>
                 <div class="header_favorits fa">
                     <a href="" class="fa-icon"><i class="fas fa-bookmark"></i></a>
-                </div>    
+                </div>
+                </div>                
             </div>            
         </div>
 
-        <nav class="header-nav">
+        <div class="header_navbar_div">
+            <input type="checkbox" name="" id="check_box_navbar">
+            <label for="check_box_navbar">Категории</label>
+            <div class="burger_line line_1"></div>
+            <div class="burger_line line_2"></div>
+            <div class="burger_line line_3"></div>
+            <div class="burger_line line_4"></div>
+            <nav class="header-nav">
             <a href="#" class="header-nav_link link"><div class="header-nav-icon icon_all"></div><span class="header-nav_name">Все</span></a></a>
             <a href="#" class="header-nav_link link"><div class="header-nav-icon icon_electronic"></div><span class="header-nav_name">Техника</span></a></a>
             <a href="#" class="header-nav_link link"><div class="header-nav-icon icon_play"></div><span class="header-nav_name">Развлечение</span></a></a>
@@ -53,13 +74,14 @@
             <a href="#" class="header-nav_link link"><div class="header-nav-icon icon_sport"></div><span class="header-nav_name">Спорт</span></a></a>
             <a href="#" class="header-nav_link link"><div class="header-nav-icon icon_excitement"></div><span class="header-nav_name">Азарт</span></a></a>
             <a href="#" class="header-nav_link link"><div class="header-nav-icon icon_18"></div><span class="header-nav_name">Для взрослых</span></a></a>
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <section class="section_top">
 
         <div class="glider-contain multiple">
-            <div class="glider_title"><h1>Горячие</h1></div>
+            <div class="glider_title"><h1>SkidWood рекомендует</h1></div>
 
             <button class="glider-prev">
                 <i class="fas fa-chevron-left"></i>
@@ -68,13 +90,27 @@
             <div class="glider_fire">
                 <div class="item_glider">
                     <img src="https://i.pinimg.com/originals/ba/db/31/badb3138cf30ee6b3b2b05af5008e720.jpg" alt="">
-
+                    <div class="item_glider_info_coupon">
+                        <div class="item_glider_desc">
+                            <span class="item_glider_desc_title">Nike</span>
+                            <span class="item_glider_desc_desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, dolor. Deleniti natus maiores placeat ea et eveniet, eligendi rem vitae!</span>
+                        </div>
+                        <a href="" class="item_glider_link">Перейти</a>
+                    </div>
                 </div>
                 <div class="item_glider">
-                    <img src="https://lh3.googleusercontent.com/proxy/FdKBFH9Lsv_Lywkt8drARLQQB5BxVToOA-I61G99zC-YzfxmYcIca37kwvUISwJd0nbf-9wA_T7K1n8GKyArxHNaKDdw" alt="">
+                    <img src="https://i.pinimg.com/originals/ba/db/31/badb3138cf30ee6b3b2b05af5008e720.jpg" alt="">
+                    <div class="item_glider_info_coupon">
+                        <span class="item_glider_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iste natus fuga eum nesciunt quo nostrum. Nam harum deleniti consequatur.</span>
+                        <a href="" class="item_glider_link">Перейти</a>
+                    </div>
                 </div>
                 <div class="item_glider">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptatibus id nesciunt veritatis aliquid? Officiis rerum voluptate ex nostrum. Expedita exercitationem aliquam fuga ipsum deserunt reprehenderit in nisi illo aut.
+                    <img src="https://i.pinimg.com/originals/ba/db/31/badb3138cf30ee6b3b2b05af5008e720.jpg" alt="">
+                    <div class="item_glider_info_coupon">
+                        <span class="item_glider_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iste natus fuga eum nesciunt quo nostrum. Nam harum deleniti consequatur.</span>
+                        <a href="" class="item_glider_link">Перейти</a>
+                    </div>                   
                 </div>
                 <div class="item_glider">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptatibus id nesciunt veritatis aliquid? Officiis rerum voluptate ex nostrum. Expedita exercitationem aliquam fuga ipsum deserunt reprehenderit in nisi illo aut.
@@ -131,7 +167,7 @@
 
         <div class="footer_socials">
             <div class="footer_social_block">
-                <div class="footer_logo">
+                <div class="footer_logo_block">
                     <a href="" class="footer_logo logo_image"></a>
                     <div class="footer_logo_text_name"><a href="">SkidWood.ru</a>
                         <span class="logo_text_desc">Выгодные акции, бесплатные купоны и не только</span>

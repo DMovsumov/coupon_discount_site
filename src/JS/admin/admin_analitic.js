@@ -8,6 +8,7 @@ const promocode = document.getElementById('promocode')
 const skidwoodNav = document.querySelector('.header_skidwood_site-nav')
 const mainAddCoupon = document.querySelector('.main_add-coupon')
 const mainDeleteCoupon = document.querySelector('.main_delete_coupon')
+const mainAddCategory = document.querySelector('.main_add_category')
 
 
 skidwoodNav.addEventListener('click', ShowSection)
@@ -21,12 +22,23 @@ function ShowSection(e) {
         showsEl(mainAddCoupon)
         if(!mainDeleteCoupon.classList.contains('notShow')){
             showsEl(mainDeleteCoupon)
+        }else if (!mainAddCategory.classList.contains('notShow')){
+            showsEl(mainAddCategory)
         }
     } else if(e.toElement.id == 'skidwood_delete_coupon') {
         showsEl(mainDeleteCoupon)
         DeleteCoupon()
         if(!mainAddCoupon.classList.contains('notShow')){
             showsEl(mainAddCoupon)
+        }else if (!mainAddCategory.classList.contains('notShow')){
+            showsEl(mainAddCategory)
+        }
+    } else if(e.toElement.id == 'skidwood_add_collections'){
+        showsEl(mainAddCategory)
+        if(!mainAddCoupon.classList.contains('notShow')){
+            showsEl(mainAddCoupon)    
+        }else if (!mainDeleteCoupon.classList.contains('notShow')){
+            showsEl(mainDeleteCoupon)
         }
     }
 }
@@ -56,7 +68,7 @@ const showsEl = (section) => {
 }
 
 
-//Плагины для секции Удалить купон
+//Добавить еще категорию
 
 
 

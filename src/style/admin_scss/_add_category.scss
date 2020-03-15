@@ -1,0 +1,95 @@
+.main_add_category {
+    margin-top: 20px;
+    display: flex;
+    
+    background-color: #fff;
+    
+    border-radius: 10px;
+    .main_add_category-add {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+
+        .add_category_block {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: first baseline;
+            align-items: flex-start;
+            .main_add_category_name {
+                width: 400px;
+                font-size: 20px;
+                outline: none;
+                border: 2px solid $border-add-coupon;
+                background-color: $main-color;
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            
+            .main_add_category_plus {
+                background-image: url('../../assets/icon_plus.png');
+            }
+
+            .main_add_category_minus{
+                background-image: url('../../assets/icon_minus.png');
+            }
+
+            .main_add_category_icon {
+                width: 30px;
+                height: 30px;
+                background-size: cover;
+                border: none;
+                outline: none;
+                background-color: #fff;
+                cursor: pointer;
+                position: absolute;
+                left: 410px;
+            }
+        }
+        
+
+        #submit_category {
+            width: 250px;
+            font-size: 20px;
+            outline: none;
+            border: 2px solid $border-add-coupon;
+            background-color: $main-color;
+            border-radius: 5px;
+        }    
+    }
+    .main_add_category-all_category {
+        margin-left: 150px;
+        padding: 20px;
+
+        .all_category_name {
+            font-size: 20px;
+            width: 400px;
+            font-size: 20px;
+            outline: none;
+            border: 2px solid $border-add-coupon;
+            background-color: $main-color;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .all_category_minus{
+            background-image: url('../../assets/icon_minus.png');
+        }
+
+        .all_category_icon {
+            width: 30px;
+            height: 30px;
+            background-size: cover;
+            border: none;
+            outline: none;
+            background-color: #fff;
+            cursor: pointer;
+            position: absolute;
+            left: 1170px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+}

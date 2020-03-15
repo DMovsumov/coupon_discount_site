@@ -37,8 +37,8 @@
                 <nav class="header_skidwood_site-nav">
                     <a href="" id="skidwood_add_coupon">Добавить купон</a>
                     <a href="" id="skidwood_delete_coupon">Удалить купон</a>
-                    <a href="" id="skidwood_add_collections">Добавить/удалить подборку/категорию</a>
-                    <a href="" id="skidwood_rewrite">Изменить информацию на сайте</a>
+                    <a href="" id="skidwood_add_collections">Добавить/удалить категорию</a>
+                    <a href="" id="skidwood_add_slider">Добавить/удалить слайд</a>
                 </nav>
             </header>
 
@@ -71,8 +71,8 @@
                     <select name="type" class="country select_country" id="select_country">
                         <option value="Россия">Россия</option>
                         <option value="Украина">Украина</option>
-                        <option value="Украина">Беларусь</option>
-                        <option value="Украина">Казахстан</option>
+                        <option value="Беларусь">Беларусь</option>
+                        <option value="Казахстан">Казахстан</option>
                     </select>
                     <input type="url" class="url input" placeholder="Ссылка на сайт">
                     <input type="text" class="type_info input" placeholder="Краткая информация купона" minlength="2">
@@ -83,21 +83,7 @@
                     <input type="url" class="img input" placeholder="Ссылка на картинку магазина">
 
                     <div class="skidwood_collections">
-                        <div class="skidwood_coll">
-                            <input type="checkbox" class="hot">
-                            <label for="hot">Горячие</label>
-                        </div>
-                        <div class="skidwood_coll">
-                            <input type="checkbox" class="only">
-                            <label for="hot">Только на SkidWood</label>
-                        </div>
-                        <div class="skidwood_coll">
-                            <input type="checkbox" class="isTrue">
-                            <label for="hot">Проверено!</label>
-                        </div>
                     </div>
-
-
                     <button type="submit" class="add_submit" id="submit_add" disabled>Добавить купон</button>
                 </form>
                 <div class="coupon_help"></div>
@@ -119,11 +105,50 @@
                             <th>Промокод</th>
                             <th>Краткая информация купона</th>
                             <th>Краткое описание купона</th>
-                            <th>Ссылка на магзин</th>
+                            <th>Ссылка на магазин</th>
                             <th>Дата действия</th>
                         </tr>
                     </table>
                 </main>
+            </section>
+
+            <section class="main_add_category notShow">
+                <form action="" class="main_add_category-add" id="category_add">
+                    <h2>Добавить категорию</h2>
+                    <div class="add_category_block">
+                        <input type="text" class="main_add_category_name" placeholder="Название категории" minlength="2">
+                        <button class="main_add_category_plus main_add_category_icon"></button>
+                    </div>
+                    <button type="submit" id="submit_category" disabled>Добавить подборку</button>
+                </form>
+                <div class="main_add_category-all_category">
+                    <h2>Все категории</h2>
+                </div>
+            </section>
+
+            <section class="main_add_slider">
+                <form action="" class="main_add_slider-form" id="add_slide-form">
+                    <h1>Добавить новый слайд</h1>
+                    <input type="text" placeholder="Введите название для слайда" class="input_slide">
+                    <input type="text" placeholder="Введите описание слайда" class="input_slide">
+                    <input type="url" placeholder="Введите ссылку на картинку слайда" class="input_slide">
+                    <input type="url" placeholder="Введите ссылку на магазин" class="input_slide">
+                    <input type="date" name="" id="" class="input_slide">
+                    <button type="submit" id="submit_slide" disabled>Добавить слайд</button>
+                </form>
+                <div class="main_add_slider-all_slider">
+                    <h1>Удалить слайд</h1>
+                    <table class="delete_slider-table" id="delete_slide">
+                        <tr class="slide_table">
+                            <th>#</th>
+                            <th>Магазин</th>
+                            <th>Краткое описание купона</th>
+                            <th>Ссылка на картинку</th>
+                            <th>Ссылка на магазин</th>
+                            <th>Дата действия</th>
+                        </tr>
+                    </table>
+                </div>
             </section>
         </section>
     </main>

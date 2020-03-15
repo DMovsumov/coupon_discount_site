@@ -14,17 +14,29 @@
     .header-top {
         display: flex;
         justify-content: flex-end;
+        align-items: center;
          
         a {
             padding-left: 50px;
         }
 
         .header_top-nav_link {
-            color: #717171;
+            color: $text-color;
+            white-space: nowrap;
             
             &:hover{
                 color: #00b600;
             }
+        }
+
+        .header_country {
+            width: 100px;
+            font-size: 15px;
+            border-radius: 10px;
+            background-color: $search-button;
+            border: none;
+            padding: 3px;
+            color: $text-color;
         }
         
     }
@@ -72,7 +84,6 @@
                 height: 50px;
 
                 position: relative;
-                width: 300px;
                 margin: 0 auto;
                 
                 margin-right: 250px;
@@ -112,102 +123,112 @@
             &:last-child{
                 margin-right: 0;
             }
+
+            .fa-icon {
+                font-size: 40px;
+            }
         }
     }
 
-    .header-nav {
-        margin-top: 20px;
-        padding: 20px 0;
+    .header_navbar_div {
         border-top: 1px solid $nav-color;
-        // border-bottom: 1px solid $nav-color;
-        // border-radius: 10px;
-        margin-bottom: 50px;
-        flex-wrap: wrap;
-
-
-        display: flex;
-        justify-content: space-between;
-
-
-        .header-nav_link {
-
-            padding: 5px 10px 5px 5px;
-            border: 1px solid $nav-color;
-            border-radius: 15px;
-            background-color: $nav-color;
+        #check_box_navbar, label {
+            display: none;
+        }
+        .header-nav {
+            margin-top: 5px;
+            padding: 20px 0;
+            // border-bottom: 1px solid $nav-color;
+            // border-radius: 10px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+    
+    
             display: flex;
-            justify-content: flex-start;
-            align-items: flex-end;
-            transition: all 0.2s ease-in-out;
-            margin-bottom: 5px;
-
-            &:hover {
-                transform: translateY(-8px);
-            }
-
-            .header-nav-icon {                
-                width: 30px;
-                height: 30px;
-                background-size: cover;
-            }            
-
-            .header-nav_name {
-                font-size: 15px;
-            }
-
-            .icon_cashback {
-                background-image: url('../../assets/cashback.png');
-            }
-
-            .icon_all {
-                background-image: url('../../assets/all.png');
-            }
-
-            .icon_electronic {
-                background-image: url('../../assets/elcectronic.png');
-            }
-
-            .icon_play {
-                background-image: url('../../assets/play.png');
-            }
-
-            .icon_finance {
-                background-image: url('../../assets/finance.png');
-            }
-
-            .icon_travel {
-                background-image: url('../../assets/travel.png');
-            }
-
-            .icon_goods{
-                background-image: url('../../assets/goods.png');
-            }
-            .icon_service {
-                background-image: url('../../assets/service.png');
-            }
-            .icon_online_shop {
-                background-image: url('../../assets/shop.png');
-            }
-            .icon_auto {
-                background-image: url('../../assets/auto.png');
-            }
-            
-            .icon_learning {
-                background-image: url('../../assets/icon_learning.png');
-            }
-
-            .icon_food {
-                background-image: url('../../assets/icon_food.png');
-            }
-            .icon_sport {
-                background-image: url('../../assets/icon_sport.png');
-            }
-            .icon_excitement{
-                background-image: url('../../assets/icon_excitement.png');
-            }
-            .icon_18{
-                background-image: url('../../assets/icon_18.png');
+            justify-content: space-between;
+    
+    
+            .header-nav_link {
+    
+                border-radius: 15px;
+                padding: 5px 10px 5px 5px;
+                background-color: $nav-color;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+                transition: all 0.2s ease-in-out;
+                margin-bottom: 5px;
+    
+                &:hover {
+                    transform: translateY(-8px);
+                }
+    
+                .header-nav-icon {                
+                    width: 30px;
+                    height: 30px;
+                    background-size: cover;
+                }            
+    
+                .header-nav_name {
+                    font-size: 15px;
+                }
+    
+                .icon_cashback {
+                    background-image: url('../../assets/cashback.png');
+                }
+    
+                .icon_all {
+                    background-image: url('../../assets/all.png');
+                }
+    
+                .icon_electronic {
+                    background-image: url('../../assets/elcectronic.png');
+                }
+    
+                .icon_play {
+                    background-image: url('../../assets/play.png');
+                }
+    
+                .icon_finance {
+                    background-image: url('../../assets/finance.png');
+                }
+    
+                .icon_travel {
+                    background-image: url('../../assets/travel.png');
+                }
+    
+                .icon_goods{
+                    background-image: url('../../assets/goods.png');
+                }
+                .icon_service {
+                    background-image: url('../../assets/service.png');
+                }
+                .icon_online_shop {
+                    background-image: url('../../assets/shop.png');
+                }
+                .icon_auto {
+                    background-image: url('../../assets/auto.png');
+                }
+                
+                .icon_learning {
+                    background-image: url('../../assets/icon_learning.png');
+                }
+    
+                .icon_food {
+                    background-image: url('../../assets/icon_food.png');
+                }
+                .icon_sport {
+                    background-image: url('../../assets/icon_sport.png');
+                }
+                .icon_excitement{
+                    background-image: url('../../assets/icon_excitement.png');
+                }
+                .icon_18{
+                    background-image: url('../../assets/icon_18.png');
+                }
             }
         }
     }
+
+    
 }
