@@ -48,6 +48,15 @@
             .slide_table {
                 font-size: 16px;
                 color: $desc-color;
+
+                .delete_line {
+                    cursor: pointer;
+                    font-size: 25px;
+                }
+
+                .desc_slide_table {
+                    font-size: 14px;
+                }
                 
                 th {
                     border-right: 1px solid $desc-color;

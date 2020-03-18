@@ -9,6 +9,7 @@ const skidwoodNav = document.querySelector('.header_skidwood_site-nav')
 const mainAddCoupon = document.querySelector('.main_add-coupon')
 const mainDeleteCoupon = document.querySelector('.main_delete_coupon')
 const mainAddCategory = document.querySelector('.main_add_category')
+const mainAddSlide = document.querySelector('.main_add_slider')
 
 
 skidwoodNav.addEventListener('click', ShowSection)
@@ -24,6 +25,8 @@ function ShowSection(e) {
             showsEl(mainDeleteCoupon)
         }else if (!mainAddCategory.classList.contains('notShow')){
             showsEl(mainAddCategory)
+        }else if(!mainAddSlide.classList.contains('notShow')){
+            showsEl(mainAddSlide)
         }
     } else if(e.toElement.id == 'skidwood_delete_coupon') {
         showsEl(mainDeleteCoupon)
@@ -32,6 +35,8 @@ function ShowSection(e) {
             showsEl(mainAddCoupon)
         }else if (!mainAddCategory.classList.contains('notShow')){
             showsEl(mainAddCategory)
+        }else if(!mainAddSlide.classList.contains('notShow')){
+            showsEl(mainAddSlide)
         }
     } else if(e.toElement.id == 'skidwood_add_collections'){
         showsEl(mainAddCategory)
@@ -39,6 +44,17 @@ function ShowSection(e) {
             showsEl(mainAddCoupon)    
         }else if (!mainDeleteCoupon.classList.contains('notShow')){
             showsEl(mainDeleteCoupon)
+        }else if(!mainAddSlide.classList.contains('notShow')){
+            showsEl(mainAddSlide)
+        }
+    } else if(e.toElement.id == 'skidwood_add_slider'){
+        showsEl(mainAddSlide)
+        if(!mainAddCoupon.classList.contains('notShow')){
+            showsEl(mainAddCoupon)    
+        }else if (!mainDeleteCoupon.classList.contains('notShow')){
+            showsEl(mainDeleteCoupon)
+        }else if(!mainAddCategory.classList.contains('notShow')){
+            showsEl(mainAddCategory)
         }
     }
 }

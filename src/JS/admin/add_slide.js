@@ -58,9 +58,9 @@ function renderListSlides(data) {
         deleteSlide.insertAdjacentHTML('beforeend', `<tr class="slide_table"  data-id="${objData[i]}">
         <th class="delete_line">&times;</th>
         <th>${data[i].shop}</th>
-        <th>${data[i].desc}</th>
-        <th>${data[i].img}</th>
-        <th>${data[i].url}</th>
+        <th class="desc_slide_table">${data[i].desc}</th>
+        <th><a href="${data[i].img}">Перейти</a></th>
+        <th><a href="${data[i].url}">Перейти</a></th>
         <th>${data[i].date}</th>
     </tr>`)
 

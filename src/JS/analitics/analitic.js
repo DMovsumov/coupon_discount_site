@@ -1,5 +1,42 @@
 // Plugins and analitic for app Skidwood
 import * as Glider from './glider'
+import {renderCouponMain} from '../main/renderCoupon.main'
+import { Coupon } from '../coupon'
+import { validDate } from '../admin/Validation'
+
+// Фильтрация по категориям
+const headerNavLink = document.querySelectorAll('.header-nav_link')
+const linkAll = document.querySelector('.link_all')
+
+
+headerNavLink.forEach(elem => {
+  elem.addEventListener('click', (e) => {
+    e.preventDefault()
+    let filter = e.toElement.innerText.trim()
+    
+    const allItems = document.querySelectorAll('.card_item')
+
+    allItems.forEach(elem => {
+        if(elem.getAttribute('category') != filter){
+          elem.style.display = 'none'
+        } else {
+          elem.style.display = 'flex'
+        }
+    })
+  })
+})
+
+linkAll.addEventListener('click', (e) =>{
+  e.preventDefault()
+  const allItems = document.querySelectorAll('.card_item')
+
+  allItems.forEach(elem => {
+    if(elem.style.display = 'none') {
+      elem.style.display = 'flex'
+    }
+  })
+})
+
 
 new Glider(document.querySelector('.glider_fire'), {
     slidesToScroll: 1,

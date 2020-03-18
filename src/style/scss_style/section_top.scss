@@ -4,7 +4,7 @@
     margin-left: 100px;
     margin-right: 100px;
 
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     .glider-contain{
         .glider_title {
             margin-bottom: 1.5em;
@@ -63,6 +63,30 @@
                         color: $header-color;
                         text-decoration: none;
                     }
+                }
+            }
+        }
+    }
+
+    .section_top_category-sort {
+        // margin-left: 150px;
+        // margin-right: 150px;
+
+        display: flex;
+        // justify-content: space-around;
+        flex-wrap: wrap;
+        .category-sort_block {
+            margin-right: 5px;
+            margin-bottom: 10px;
+            a {
+                text-decoration: none;
+                padding: 5px 10px;
+                background-color: #fff;
+                color: $color-logo-text;
+                font-size: 16px;
+
+                &:hover {
+                    color: #00b600;
                 }
             }
         }

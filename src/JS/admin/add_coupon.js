@@ -65,7 +65,7 @@ function submitCoupon(event){
                 desc: input[5].value,
                 date: input[6].value,
                 img: input[7].value,
-                category: allCategory
+                collections: allCategory
             }
             
             

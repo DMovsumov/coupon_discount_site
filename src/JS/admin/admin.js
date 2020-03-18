@@ -3,6 +3,7 @@ import * as Validation from './add_coupon'
 import { Coupon } from "../coupon"
 import { LoginOnLoad, authWithEmailAndPassword } from './auth'
 import {addSlideToDb} from './add_slide'
+import * as Collect from './add_collections'
 
 // Coupon.loadCoupon()
 

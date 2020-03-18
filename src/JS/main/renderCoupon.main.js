@@ -4,25 +4,24 @@ import { openModalCoupon, removeModal, copyPromocode } from '../analitics/openMo
 
 const mainCoupon = document.querySelector('.section_main')
 
-export function renderCouponMain (data){
+export function renderCouponMain(){
     Coupon.loadCoupon()
     .then(renderList)
 }
 
 function renderList(data) {
-    console.log(data)
     const keyDelete = Object.keys(data)
     const objData = keyDelete.reduce((j, k) => {
         j[k] = k
         return j
     }, {})
 
-    for(let i in data){            
-        mainCoupon.insertAdjacentHTML('afterbegin', `<div class="card_item" data-id="${objData[i]}">            
+    for(let i in data){
+        let localeDate = new Date(data[i].date).toLocaleDateString()            
+        mainCoupon.insertAdjacentHTML('afterbegin', `<div class="card_item" data-id="${objData[i]}" category="${data[i].category}" collections="${data[i].collections}" country="${data[i].country}">            
         <div class="card_cheks">
             <span class="card_cheks-type">${data[i].type}</span>
             <span class="card_cheks-type_info">${data[i].typeInfo}</span>
-            
             <div class="card_line"></div>                
         </div>            
         <div class="card">            
@@ -37,7 +36,7 @@ function renderList(data) {
             <div class="card_info-icon">
                 <div class="card_date">
                     <div class="card_icon icon_time"></div>
-                    <span class="card_cheks-date">${data[i].date}</span>
+                    <span class="card_cheks-date">${localeDate}</span>
                 </div>
                 <div class="card_count">
                     <div class="card_icon icon_count"></div>
@@ -45,7 +44,15 @@ function renderList(data) {
                 </div>
             </div>
         </div>
-    </div>`)
+        </div>`)
+        const dateValid = document.querySelector('.card_cheks-date')
+        const dateNow = new Date().toLocaleDateString()
+        if(dateNow > dateValid.innerText){
+            let id = dateValid.parentElement.parentElement.parentElement.parentElement.getAttribute('data-id')
+            delete data[id]
+            Coupon.updateCoupon(data)            
+        }
+        
         openModalCoupon()
         
         const openModalBtn = document.querySelector('.open_info_coupon')
@@ -109,25 +116,3 @@ function modalCoupon(...db){
         copyPromocode('.copy_promocode', '.modal_promocode')
     }
 }
-
-
-const action = `<div class="section_main_modal-coupon">
-<div class="modal_content">
-    <div class="close_modal">&times;</div>
-    <section class="modal_header">
-        <div class="modal_type-info">
-            <div class="modal_type-info-text">-50%</div>
-            <div class="modal_type-info-type">Промокод</div>
-            
-        </div>
-        <div class="modal_info-coupon">
-            <div class="modal_info-coupon-shop">Перекресток</div>
-            <div class="modal_info-coupon-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur facilis, nam explicabo inventore deleniti porro.</div>
-        </div>
-    </section>
-    <section class="modal_main">
-        <p>Промокод не требуется. Для того чтобы воспользоваться акцией, просто перейдите на сайт по кнопке ниже.</p>
-        <a href="" class="modal_main-link_coupon" data-newWindow>Перейти на сайт</a>
-    </section>
-</div>
-</div>`
