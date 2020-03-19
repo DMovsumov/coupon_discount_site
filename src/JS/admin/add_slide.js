@@ -56,7 +56,7 @@ function renderListSlides(data) {
 
     for(let i in data){
         deleteSlide.insertAdjacentHTML('beforeend', `<tr class="slide_table"  data-id="${objData[i]}">
-        <th class="delete_line">&times;</th>
+        <th><a class="delete_line">&times;</a></th>
         <th>${data[i].shop}</th>
         <th class="desc_slide_table">${data[i].desc}</th>
         <th><a href="${data[i].img}">Перейти</a></th>
@@ -64,13 +64,13 @@ function renderListSlides(data) {
         <th>${data[i].date}</th>
     </tr>`)
 
-        const slideTable = deleteSlide.querySelectorAll('.delete_line')
+        const deleteLine = document.querySelectorAll('.delete_line')
 
-        slideTable.forEach(i => i.addEventListener('click', (e) => {
-            e.target.parentElement.parentElement.remove()
+        deleteLine.forEach(i => i.addEventListener('click', (e) => {
             let id = e.target.parentElement.parentElement.getAttribute('data-id')
             delete data[id]
             Slider.updateSlide(data)
+            e.target.parentElement.parentElement.remove()
         }))
     }
 }

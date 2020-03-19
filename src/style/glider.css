@@ -43,7 +43,13 @@
     background-size: cover;
   }
   .glider-slide img {
+    display: block;
+    margin: auto;
     max-width: 100%;
+    min-height: 100%;
+    /* -o-object-fit: cover;
+    object-fit: cover; */
+    object-position: center;
   }
   .glider::-webkit-scrollbar {
     opacity: 0;

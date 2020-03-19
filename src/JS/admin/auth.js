@@ -1,20 +1,10 @@
-import { Coupon } from "../coupon"
+// import { Coupon } from "../coupon"
 
 
 const modalLogin = document.createElement('div')
 const main = document.querySelector('body')
 
-modalLogin.style.width = '100%'
-modalLogin.style.height = '100%'
 modalLogin.classList.add('modal_login')
-modalLogin.style.backgroundColor = '#fff'
-modalLogin.style.zIndex = '100'
-modalLogin.style.position = 'absolute'
-modalLogin.style.display = 'flex'
-modalLogin.style.alignItems = 'center'
-modalLogin.style.justifyContent = 'center'
-
-main.disabled = true
 
 export function LoginOnLoad() {
     main.insertAdjacentElement('afterbegin', modalLogin)

@@ -3,16 +3,31 @@ import * as Glider from './glider'
 import {renderCouponMain} from '../main/renderCoupon.main'
 import { Coupon } from '../coupon'
 import { validDate } from '../admin/Validation'
+import { renderListSlider } from '../main/renderSlider'
 
 // Фильтрация по категориям
 const headerNavLink = document.querySelectorAll('.header-nav_link')
 const linkAll = document.querySelector('.link_all')
+const country = document.querySelector('.header_country')
 
+country.addEventListener('change', (e) => {
+  const allItems = document.querySelectorAll('.card_item')
+  const filter = e.target.value
+  
+  
+  allItems.forEach(elem => {
+    if(elem.getAttribute('country') != filter){
+      elem.style.display = 'none'
+    } else {
+      elem.style.display = 'flex'
+    }
+  })
+})
 
 headerNavLink.forEach(elem => {
   elem.addEventListener('click', (e) => {
     e.preventDefault()
-    let filter = e.toElement.innerText.trim()
+    let filter = e.target.innerText.trim()
     
     const allItems = document.querySelectorAll('.card_item')
 
@@ -38,7 +53,9 @@ linkAll.addEventListener('click', (e) =>{
 })
 
 
-new Glider(document.querySelector('.glider_fire'), {
+
+export function gliderFunc() {
+  new Glider(document.querySelector('.glider_fire'), {
     slidesToScroll: 1,
     slidesToShow: 5,
     draggable: true,
@@ -86,6 +103,8 @@ new Glider(document.querySelector('.glider_fire'), {
       }
     ]
 });
+}
+
 
 
 

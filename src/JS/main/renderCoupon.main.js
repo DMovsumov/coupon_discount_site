@@ -61,6 +61,12 @@ function renderList(data) {
             modalCoupon(mainCoupon, data[i].typeInfo, data[i].type, data[i].shop, data[i].desc, data[i].url, 
                 data[i].promocode)
         })
+
+        const cardItem = document.querySelector('.card_item').addEventListener('click', (e) => {
+            e.preventDefault()
+            modalCoupon(mainCoupon, data[i].typeInfo, data[i].type, data[i].shop, data[i].desc, data[i].url, 
+                data[i].promocode)
+        })
     }
 }
 
@@ -86,6 +92,10 @@ function modalCoupon(...db){
             </section>
         </div>
         </div>`)
+        const link_coupon = document.querySelector('.modal_main-link_coupon').addEventListener('click', (e) => {
+            e.preventDefault()
+            window.open(e.target.href);
+        })
         removeModal('.close_modal')
     } else if(db[2] == 'Купон') {
         db[0].insertAdjacentHTML('afterbegin', `<div class="section_main_modal-coupon">
@@ -112,6 +122,10 @@ function modalCoupon(...db){
             </section>
         </div>
     </div>`)
+        const link_coupon = document.querySelector('.modal_main-link_coupon').addEventListener('click', (e) => {
+            e.preventDefault()
+            window.open(e.target.href);
+        })
         removeModal('.close_modal')
         copyPromocode('.copy_promocode', '.modal_promocode')
     }

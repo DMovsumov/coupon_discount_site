@@ -16,9 +16,8 @@ Category.loadCategory()
     collections.forEach(elem => {
         elem.addEventListener('click', (e) => {
             e.preventDefault()
-        
             const allItems = document.querySelectorAll('.card_item')
-            let filter = e.toElement.innerText.trim()
+            let filter = e.target.innerText.trim()
         
             allItems.forEach(elem => {
                 if(elem.getAttribute('collections').split(',').find(i => i == filter)){
@@ -26,11 +25,9 @@ Category.loadCategory()
                 } else {
                     elem.style.display = 'none'
                 }
-                
-                    
             })
         })
-        })
+    })
 })
 
 function renderListCollection(data){

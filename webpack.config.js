@@ -45,9 +45,9 @@ module.exports = {
             chunks: ['main', 'analitic']
         }),
         new HTMLWebpackPlugin({
-            filename: 'admin',
+            filename: 'admnfngfn',
             title: 'Admin Panel',
-            template: './src/admin.html',
+            template: './src/admnfngfn.html',
             chunks: ['admin', 'admin_analitic']
         }),
         new CleanWebpackPlugin(),

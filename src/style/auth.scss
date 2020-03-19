@@ -1,33 +1,4 @@
-@import './admin_vars';
-@import './admin_header';
-@import './mixin/font.scss';
-@import './main.scss';
-@import './add_category';
-@import './add_slide';
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: $main-color;
-    @include font ($font-body, 14px, normal, $font-body-color, 400);
-    width: 100%;
-    height: 100%;
-}
-.modal_login {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
-    z-index: 100;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+@import './admin_scss/admin_vars';
 .auth {
     display: flex;
     flex-direction: column;

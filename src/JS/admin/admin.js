@@ -7,7 +7,7 @@ import * as Collect from './add_collections'
 
 // Coupon.loadCoupon()
 
-// window.addEventListener('load', openModal())
+window.addEventListener('load', openModal())
 
 
 function openModal() {
