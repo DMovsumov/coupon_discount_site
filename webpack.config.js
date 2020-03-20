@@ -26,7 +26,7 @@ const styleLoader = ext => {
 module.exports = {
     mode: 'development',
     entry: {
-        main: './src/index.js',
+        main: ['@babel/polyfill', './src/index.js'],
         analitic: './src/JS/analitics/analitic.js',
         admin: './src/JS/admin/admin.js',
         admin_analitic: './src/JS/admin/admin_analitic.js'
@@ -53,7 +53,11 @@ module.exports = {
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
-        })        
+        }),
+        new CopyWebpackPlugin([{
+            from: path.resolve(__dirname, 'src/assets/favicon.ico'),
+            to: path.resolve(__dirname, 'dist')
+        }])        
     ],
     module: {
         rules: [
@@ -76,6 +80,17 @@ module.exports = {
             {
                 test: /\.svg$/,
                 loader: ['svg-inline-loader']
+            },
+            {   test: /\.js$/, 
+                exclude: /node_modules/, 
+                loader: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            '@babel/preset-env'
+                        ]
+                    }
+                } 
             }
         ]
     }

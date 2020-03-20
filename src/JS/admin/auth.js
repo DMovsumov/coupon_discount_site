@@ -1,10 +1,14 @@
 // import { Coupon } from "../coupon"
 
-
+const headerModule = document.querySelector('.header')
+const mainModule = document.querySelector('.main')
 const modalLogin = document.createElement('div')
 const main = document.querySelector('body')
 
 modalLogin.classList.add('modal_login')
+
+headerModule.style.display = 'none'
+mainModule.style.display = 'none'
 
 export function LoginOnLoad() {
     main.insertAdjacentElement('afterbegin', modalLogin)
@@ -42,6 +46,8 @@ export function authWithEmailAndPassword(email, password) {
         if(token){
             modalLogin.style.display = 'none'
             main.disabled = false
+            headerModule.style.display = 'block'
+            mainModule.style.display = 'block'
         } else {
             document.querySelector('.auth').insertAdjacentHTML('beforeEnd', getNotAccess())
         }
