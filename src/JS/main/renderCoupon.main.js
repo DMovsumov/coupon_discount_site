@@ -21,14 +21,14 @@ function renderList(data) {
         mainCoupon.insertAdjacentHTML('afterbegin', `<div class="card_item" data-id="${objData[i]}" category="${data[i].category}" collections="${data[i].collections}" country="${data[i].country}">            
         <div class="card_cheks">
             <span class="card_cheks-type">${data[i].type}</span>
-            <span class="card_cheks-type_info">${data[i].typeInfo}</span>
+            <span class="card_cheks-type_info card_search_items">${data[i].typeInfo}</span>
             <div class="card_line"></div>                
         </div>            
         <div class="card">            
             <div class="card_img" style="background-image: url(${data[i].img});"></div>
             <div class="card_text">
-                <div class="card_text_name">${data[i].shop}</div>
-                <div class="card_text_desc">${data[i].subDesc}  
+                <div class="card_text_name card_search_items">${data[i].shop}</div>
+                <div class="card_text_desc card_search_items">${data[i].subDesc}  
             </div>
             
             </div>

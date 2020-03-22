@@ -18,7 +18,7 @@ Category.loadCategory()
             e.preventDefault()
             const allItems = document.querySelectorAll('.card_item')
             let filter = e.target.innerText.trim()
-        
+
             allItems.forEach(elem => {
                 if(elem.getAttribute('collections').split(',').find(i => i == filter)){
                     elem.style.display = 'flex'                    
@@ -27,6 +27,20 @@ Category.loadCategory()
                 }
             })
         })
+    })
+})
+
+const hotJar = document.querySelector('.fa-hotjar')
+
+hotJar.addEventListener('click', (e) => {
+    e.preventDefault()
+    const allItems = document.querySelectorAll('.card_item')
+    allItems.forEach(elem => {
+    if(elem.getAttribute('collections').split(',').find(i => i == 'Горячие')){
+        elem.style.display = 'flex'                    
+            } else {
+        elem.style.display = 'none'
+        }
     })
 })
 

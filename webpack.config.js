@@ -29,7 +29,8 @@ module.exports = {
         main: ['@babel/polyfill', './src/index.js'],
         analitic: './src/JS/analitics/analitic.js',
         admin: './src/JS/admin/admin.js',
-        admin_analitic: './src/JS/admin/admin_analitic.js'
+        admin_analitic: './src/JS/admin/admin_analitic.js',
+        service: './src/JS/views_scripts/service.js'
     },
     output: {
         filename: '[name].[contenthash].js',
@@ -51,6 +52,12 @@ module.exports = {
             chunks: ['admin', 'admin_analitic']
         }),
         new CleanWebpackPlugin(),
+        new HTMLWebpackPlugin({
+            filename: 'about_service',
+            title: 'About_service',
+            template: './src/views/about_service.html',
+            chunks: ['service']
+        }),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
         }),

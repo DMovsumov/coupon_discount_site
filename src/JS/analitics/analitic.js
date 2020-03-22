@@ -9,6 +9,7 @@ import { renderListSlider } from '../main/renderSlider'
 const headerNavLink = document.querySelectorAll('.header-nav_link')
 const linkAll = document.querySelector('.link_all')
 const country = document.querySelector('.header_country')
+const searchCoupons = document.getElementById('search_coupons')
 
 country.addEventListener('change', (e) => {
   const allItems = document.querySelectorAll('.card_item')
@@ -52,7 +53,39 @@ linkAll.addEventListener('click', (e) =>{
   })
 })
 
+searchCoupons.oninput = function() {
+  let value = this.value.trim()
+  const allItems = document.querySelectorAll('.card_item')
+  
+  if( value != '') {
+    allItems.forEach(elem => {
+      const searchItems = elem.querySelectorAll('.card_search_items')
+      console.log(searchItems);
+      
+      searchItems.forEach(element => {
+        if(element.innerText.search(value) == -1){
+          elem.style.display = 'none'
+        } else {
+          elem.style.display = 'flex'
+        }
+      })
+    })
+  } else {
+    allItems.forEach(elem => {
+      elem.style.display = 'flex'
+    })
+  }
+}
 
+// function sortSearch(element, hide, value) {
+//   element.forEach(e => {
+//     if(e.innerText.search(value) == -1){
+//       hide.style.display = 'none'
+//     } else {
+//       hide.style.display = 'flex'
+//     }
+//   })
+// }
 
 export function gliderFunc() {
   new Glider(document.querySelector('.glider_fire'), {
