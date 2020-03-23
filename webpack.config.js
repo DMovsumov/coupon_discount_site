@@ -30,7 +30,8 @@ module.exports = {
         analitic: './src/JS/analitics/analitic.js',
         admin: './src/JS/admin/admin.js',
         admin_analitic: './src/JS/admin/admin_analitic.js',
-        service: './src/JS/views_scripts/service.js'
+        service: './src/JS/views_scripts/service.js',
+        partners: './src/JS/views_scripts/partners.js'
     },
     output: {
         filename: '[name].[contenthash].js',
@@ -57,6 +58,12 @@ module.exports = {
             title: 'About_service',
             template: './src/views/about_service.html',
             chunks: ['service']
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'partners',
+            title: 'Partners',
+            template: './src/views/partners.html',
+            chunks: ['partners']
         }),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
