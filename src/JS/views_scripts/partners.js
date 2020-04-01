@@ -4,7 +4,7 @@ import '../../style/views/modal_appeal.scss'
 
 import {renderModalAppeal} from './modal_appeal'
 const main = document.querySelector('.main')
-const btn = document.querySelector('.clicks').addEventListener('click', (e)=> {
+const btn = document.querySelector('.offer_btn').addEventListener('click', (e)=> {
     e.preventDefault()
     renderModalAppeal(main)
 })

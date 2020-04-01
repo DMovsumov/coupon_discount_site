@@ -14,12 +14,12 @@
         <div class="header-top">
             <a href="about_service" class="header_top-nav_link link service">О сервисе</a>
             <a href="partners" class="header_top-nav_link link partner">Стать партнером</a>
-            <a href="#" class="header_top-nav_link link contacts">Контакты</a>
+            <a href="contacts" class="header_top-nav_link link contacts">Контакты</a>
         </div>
 
         <div class="header-main">
             <div class="header-left">
-                <a href="" class="logo_image"></a>
+                <a href="index.html" class="logo_image"></a>
                 <div class="logo_text_name"><a href="">SkidWood.ru</a><span class="logo_text_desc">Выгодные акции, бесплатные купоны и не только</span>
             </div>
                         
@@ -27,73 +27,119 @@
     </header>
 
     <main class="main">
-        <!-- <div class="main_modal-appeal">
-            <form action="" class="main_form">
-                <label for="" class="main_label">Тема обращения:
-                    <ul class="table_change">
-                        <li class="change_item"><button class="change_item_link active" value="Сотрудничество">Сотрудничество</button></li>
-                        <li class="change_item"><button class="change_item_link" value="Предложение">Предложение</button></li>
-                        <li class="change_item"><button class="change_item_link" value="Техническая пробема">Техническая пробема</button></li>
-                        <li class="change_item"><button class="change_item_link" value="Другое">Другое</button></li>
+        <section class="main_top">
+        </section>
+        <section class="main_centr">
+            <div class="main_centr-block_layout">
+                <h3 class="small">О нас</h3>
+                <h2>Основные причины сотрудничества с нами</h2>
+                <div class="main_centr-blok_text">
+                    <ul class="partnersBenefits">
+                        <li class="partnersBenefits-item">
+                            <div class="partnersBenefits-item_img handHeart"></div>
+                            <h3>Доверительные отношения</h3>
+                            <span>Мы ценим каждого партнера, <br> и мы за долговременные, доверительные <br> и прозрачные партнерские отношения.</span>
+                        </li>
+                        <li class="partnersBenefits-item">
+                            <div class="partnersBenefits-item_img clients"></div>
+                            <h3>Новые клиенты</h3>
+                            <span>Skidwood помощет вам получить новых клиентов. <br> С вас услуга/товар с нас аудитория - основа <br> взаимовыгодных отношенийс нами.</span>
+                        </li>
+                        <li class="partnersBenefits-item">
+                            <div class="partnersBenefits-item_img client_pay"></div>
+                            <h3>Оплата</h3>
+                            <span>Наши клиенты получают купоны и <br> всю информацию бесплатно, <br> а все расчеты ведутся уже с вами на прямую.</span>
+                        </li>
+                        <li class="partnersBenefits-item">
+                            <div class="partnersBenefits-item_img ads"></div>
+                            <h3>Варианты сотрудничества</h3>
+                            <span>У нас есть множество вариантов сотрудничества <br> под любой запрос / бюджет / и т.д.</span>
+                        </li>
                     </ul>
-                </label>
-                <label for="" class="main_label">О компании:
-                    <input type="text" class="main_input" placeholder="Название компании">
-                    <input type="text" class="main_input" placeholder="Вид деятельности">
-                </label>
-                <label for="" class="main_label contacts_label">
-                    Контактные данные:
-                    <div class="family_name">
-                        <input type="text" class="main_input" name="" id="" placeholder="Имя">
-                        <input type="text" class="main_input" name="" id="" placeholder="Фамилия">
-                    </div>
-                    <input type="email" class="main_input" name="" id="" placeholder="E-mail">
-                </label>
-                <label for="" class="main_label country_label">Страна размещения:
-                <select class="header_country fa">
-                <option value="Все">Все</option>
-                <option value="Россия" class="header_country_option">Россия</option>
-                <option value="Украина">Украина</option>
-                <option value="Казахстан">Казахстан</option>
-                <option value="Беларусь">Беларусь</option>
-                </select></label>
-                <label for="" class="main_label category_label">Категория
-                <select name="type" class="category select_category" id="select_category">
-                    <option value="Техника">Техника</option>
-                    <option value="Развлечения">Развлечения</option>
-                    <option value="Финансы">Финансы</option>
-                    <option value="Путешествия">Путешествия</option>
-                    <option value="Товары">Товары</option>
-                    <option value="Услуги">Услуги</option>
-                    <option value="CashBack">CashBack</option>
-                    <option value="Онлайн магазины">Онлайн магазины</option>
-                    <option value="Авто">Авто</option>
-                    <option value="Обучение">Обучение</option>
-                    <option value="Еда">Еда</option>
-                    <option value="Спорт">Спорт</option>
-                    <option value="Азарт">Азарт</option>
-                    <option value="Для взрослых">Для взрослых</option>
-                </select>
-                </label>
-                <label for="" class="main_label">
-                Подкатегория: <input type="text" class="main_input" placeholder="Название подкатегории">
-                </label>
-            <label for="" class="main_label type_label">Тип:
-                <select name="type" class="type select_type" id="select_type">
-                    <option value="Акция">Акция</option>
-                    <option value="Купон">Купон</option>
-                </select>
-            </label>
-            <label for="" class="main_label">Введите промокод: 
-                <input type="text" class="main_input" placeholder="Введите промокод">
-            </label>
-            <label for="" class="main_label">Напишите нам всю информацию о вашем предложении:
-                <textarea name="" id="" cols="30" rows="10" class="main_area"></textarea>
-            </label>
-            <button type="submit" class="main_button">Отправить запрос</button>
-        </form>
-        </div> -->
-        <button class="clicks">Click</button>
+                </div>
+            </div>
+        </section>
+        <section class="main_bot">
+            <div class="main-rules">
+                <h3>Обязательно к прочтению</h3>
+                <h2>Основные правила</h2>
+                <span>Уважаемые партнеры и потенциальные партнеры, предлагаем к вашему прочтению основные моменты из опыта работы и показать вам основу нашего с вами взаимодествия.</span>
+                <ol class="main_rules-list">
+                    <li><span>Основная цель сервиса Skidwood предложить вам выгодные цены и большой охват аудитории.</span></li>
+                    <li><span>Прежде чем начать взаимодействовать с партнерами мы тщательно смотрим и проверяем их предложение, поскольку мы очень сильно дорожим нашей аудиторией.</span></li>
+                    <li><span>Партнеров мы призываем в первую очередь ориентироваться на интересы пользователей. Потому что именно пользователи являются двигателями бизнеса.</span></li>
+                    <li><span>Задача Skidwood - показать вашу акцию пользователям, чем больше и интересней акция, тем больше отклик от пользователя. Ваша задача — сделать пользователей акции своими постоянными клиентами. В том числе и через оказание качественного сервиса.</span></li>
+                    <li><span>Важно понимать что у каждого пользователя разные вкусы и не каждый перейдет к вам увидев вашу акцию.</span></li>
+                    <li><span>Еще одна вещь которую стоит понимать - не все, кто пришёл по акции, вернётся к вам. Это нормально. Такая вероятность есть и тогда, когда клиент пришел к вам не по купону.</span></li>
+                    <li><span>Мы стремимся договориться с каждым партнером и потенциальным партнером,
+                        опираясь на вышенаписанное. Хотим сразу сказать, что не все переговоры заканчиваются проведением акции.
+                        Но в любом случае это опыт для нас и для вас. И в конце концов мы не единственный рекламный канал.
+                        Каждый выбирает то, что больше подходит ему.</span></li>
+                </ol>
+                <span class="rules_enter">Если прочитали и согласны со всем что написано, тогде просим воспользоваться кнопкой внизу по середине экрана. Или же написать нам напрямую на почту, которая указана в разделе Контакты. После обращения к вам будет прикреплен менеджер который вам все расскажет и проконсультирует по всем вопросам.</span>
+            </div>
+        </section>
+        <button class="offer_btn">Оставить заявку</button>
     </main>
+
+    <footer class="footer">
+        <div class="footer_advantages">
+            <div class="footer_economy">
+                <div class="footer_icon icon_economy"></div>
+                <span class="footer_advanteges-text"><strong>43%</strong><br> Такое количество денег в среднем экономят пользователи SkidWood на покупках</span>
+            </div>
+            <div class="footer_sale-offers">
+                <div class="footer_icon icon_sale-offers"></div>
+                <span class="footer_advanteges-text">Всегда актуальные скидки и предложения</span>
+            </div>
+            <div class="footer_private-information">
+                <div class="footer_icon icon_private-information"></div>
+                <span class="footer_advanteges-text">Экслюзивные предложение которые вы нигде больше не найдете</span>
+            </div>
+            <div class="footer_free-coupons">
+                <div class="footer_icon icon_free-coupons"></div>
+                <span class="footer_advanteges-text">Бесплатные купоны и промокоды</span>
+            </div>
+        </div>
+
+        <div class="footer_socials">
+            <div class="footer_social_block">
+                <div class="footer_logo_block">
+                    <a href="" class="footer_logo logo_image"></a>
+                    <div class="footer_logo_text_name"><a href="">SkidWood.ru</a>
+                        <span class="logo_text_desc">Выгодные акции, бесплатные купоны и не только</span>
+                    </div>
+                </div>
+                <div class="footer_socials_icons">
+                    <a href="" class="icon_yandex_dzen"></a>
+                    <a href="" class="icon_instagram"></a>
+                    <a href="" class="icon_twitter"></a>
+                    <a href="" class="icon_wk"></a>
+                    <a href="" class="icon_telegram"></a>
+                </div>
+            </div>
+
+            <div class="footer_company">
+                <div class="footer_aboutus">
+                  <a href="">О сервисе</a> 
+                </div>
+                <div class="footer_partners">
+                    <a href="">Стать партнером</a>
+                </div>
+            </div>
+
+            <div class="footer_helps">
+                <h1>Помощь</h1>
+                <details class="footer_hepls_coupon">
+                    <summary>Как использовать купон или промокод?</summary>
+                    Чтобы использовать купон или промокод, вам необходимо навести и нажать на купон и в всплывающем окошке скопировать номер купона. Затем перейти в магазин и использовать данный купон.
+                </details>
+                <details class="footer_helps_action">
+                    <summary>Разница между купоном и акцией?</summary>
+                    Разница между акцией и купонами с промокодами заключается в том, что для того чтобы воспользоваться акцией вам необходимо просто нажать на нее и перейти в магазин в новом окне, а для того чтобы воспользоваться купоном или промокодом необходимо скопировать номер купона или промокода и ввести его на сайте где он участвует
+                </details>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
