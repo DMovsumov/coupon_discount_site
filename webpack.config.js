@@ -32,7 +32,8 @@ module.exports = {
         admin_analitic: './src/JS/admin/admin_analitic.js',
         service: './src/JS/views_scripts/service.js',
         partners: './src/JS/views_scripts/partners.js',
-        contacts: './src/JS/views_scripts/contacts.js'
+        contacts: './src/JS/views_scripts/contacts.js',
+        journal: './src/JS/journal/journal.js'
     },
     output: {
         filename: '[name].[contenthash].js',
@@ -65,6 +66,12 @@ module.exports = {
             title: 'Partners',
             template: './src/views/partners.html',
             chunks: ['partners']
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'journal',
+            title: 'SkidWood_Journal',
+            template: './src/journal.html',
+            chunks: ['journal']
         }),
         new HTMLWebpackPlugin({
             filename: 'contacts',
