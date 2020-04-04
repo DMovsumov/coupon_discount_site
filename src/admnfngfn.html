@@ -7,6 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SkidWood Панель Администратора</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src='https://cdn.tiny.cloud/1/j31pvme1igrxs5fa2k4zrz1uo7qugqb4z7etehx9nwlpdyhq/tinymce/5/tinymce.min.js' referrerpolicy="origin">
+    </script>
+    <script>
+      tinymce.init({
+        selector: '#mytextarea'
+      });
+    </script>
 </head>
 
 <body>
@@ -26,7 +33,6 @@
                 <a href="">SkidWood</a>
                 <a href="">SkidWood journal</a>
                 <a href="">Email</a>
-                <a href="">Добавить доступ</a>
             </nav>
         </section>
     </header>
@@ -149,6 +155,57 @@
                         </tr>
                     </table>
                 </div>
+            </section>
+        </section>
+
+        <section class="skidwood_journal">
+            <header class="skidwood_journal_header">
+                <nav class="header_skidwood_journal-nav">
+                    <a href="">Написать статью</a>
+                    <a href="">Удалить статью</a>
+                </nav>
+            </header>
+
+            <section class="add_article">
+                <form action="" id="add_article_form">
+                    <input type="text" placeholder="Введите заголовок статьи" minlength="2">
+                    <input type="text" placeholder="Введите краткую информацию отображаемой статьи" minlength="5">
+                    <input type="url" placeholder="Введите url картинки">
+                    <select name="type" id="select_category">
+                        <option value="Техника">Техника</option>
+                        <option value="Развлечения">Развлечения</option>
+                        <option value="Финансы">Финансы</option>
+                        <option value="Путешествия">Путешествия</option>
+                        <option value="Товары">Товары</option>
+                        <option value="Услуги">Услуги</option>
+                        <option value="CashBack">CashBack</option>
+                        <option value="Онлайн магазины">Онлайн магазины</option>
+                        <option value="Авто">Авто</option>
+                        <option value="Обучение">Обучение</option>
+                        <option value="Еда">Еда</option>
+                        <option value="Спорт">Спорт</option>
+                        <option value="Азарт">Азарт</option>
+                        <option value="Для взрослых">Для взрослых</option>
+                        <option value="Для взрослых">Заработок</option>
+                    </select>
+                    <textarea id="mytextarea" name="mytextarea">
+                        Hello, World!
+                    </textarea>                    
+                    <button type="submit" id="submit_form_article" disabled>Отправить</button>
+                </form>
+            </section>
+
+            <section class="delete_article">
+                <ul class="delete_article_items">
+                    <li class="article_item">
+                        <img src="https://www.prikol.ru/wp-content/uploads/2017/10/kartinki-04102017-001.jpg" alt="">
+                        <div class="text_info">
+                            <h3>Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quasi obcaecati quod molestias vero molestiae pariatur reiciendis eos sunt qui.</p>
+                            <span><strong>25.45.2012</strong></span>
+                        </div>
+                    </li>
+                </ul>
             </section>
         </section>
     </main>

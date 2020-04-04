@@ -10,6 +10,10 @@ const mainAddCoupon = document.querySelector('.main_add-coupon')
 const mainDeleteCoupon = document.querySelector('.main_delete_coupon')
 const mainAddCategory = document.querySelector('.main_add_category')
 const mainAddSlide = document.querySelector('.main_add_slider')
+const headerNavList = document.querySelector('.header_nav-list')
+
+const skidwoodSite = document.querySelector('.skidwood_site')
+const skidwoodJournal = document.querySelector('.skidwood_journal')
 
 
 skidwoodNav.addEventListener('click', ShowSection)
@@ -86,8 +90,34 @@ const showsEl = (section) => {
 
 //Добавить еще категорию
 
+headerNavList.addEventListener('click', (e) => {
+    e.preventDefault()
+    if(e.target.innerText.trim() == 'SkidWood'){
+        skidwoodSite.style.display = 'block'
+        skidwoodJournal.style.display = 'none'
+    } else if(e.target.innerText.trim() == 'SkidWood journal'){
+        skidwoodSite.style.display = 'none'
+        skidwoodJournal.style.display = 'block'
+    }
+    
+})
 
 
+
+const journalNav = document.querySelector('.header_skidwood_journal-nav')
+const addArticleSection = document.querySelector('.add_article')
+const deleteArticle = document.querySelector('.delete_article')
+    
+journalNav.addEventListener('click', e => {
+    e.preventDefault()
+    if(e.target.innerText.trim() == 'Написать статью'){
+        addArticleSection.style.display = 'block'
+        deleteArticle.style.display = 'none'
+    } else if(e.target.innerText.trim() == 'Удалить статью') {
+        addArticleSection.style.display = 'none'
+        deleteArticle.style.display = 'block'
+    }
+})
 
 
     

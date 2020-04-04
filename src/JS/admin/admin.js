@@ -4,10 +4,11 @@ import { Coupon } from "../coupon"
 import { LoginOnLoad, authWithEmailAndPassword } from './auth'
 import {addSlideToDb} from './add_slide'
 import * as Collect from './add_collections'
+import * as Articles from './add_article'
 
 // Coupon.loadCoupon()
 
-window.addEventListener('load', openModal())
+// window.addEventListener('load', openModal())
 
 
 function openModal() {

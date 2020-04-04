@@ -19,7 +19,7 @@ export class Mail {
         .then(data => data)
     }
 
-    static updateMail(coupon) { //Запрос PUT необходим при удалении купона/купонов
+    static updateMail(coupon) { //Запрос PUT необходим при удалении 
         fetch(`https://skidwood-5a4ed.firebaseio.com/mail.json`,{
             method: 'PUT',
             body: JSON.stringify(mail),
