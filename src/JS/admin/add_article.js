@@ -2,6 +2,7 @@ import { Article } from "../article"
 
 const addArticleForm = document.getElementById('add_article_form')
 const submit_form_article = addArticleForm.querySelector('#submit_form_article')
+const selectCategory = document.getElementById('select_category')
 
 submit_form_article.disabled = false
 
@@ -15,7 +16,9 @@ addArticleForm.addEventListener('submit', (event) => {
         header: input[0].value,
         subDesc: input[1].value,
         img: input[2].value,
-        desc: tinymce.activeEditor.getContent()
+        category: selectCategory.value,
+        desc: tinymce.activeEditor.getContent(),
+        date: new Date().toLocaleDateString()
     }
     
     submit_form_article.disabled = true

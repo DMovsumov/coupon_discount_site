@@ -5,6 +5,7 @@ import { LoginOnLoad, authWithEmailAndPassword } from './auth'
 import {addSlideToDb} from './add_slide'
 import * as Collect from './add_collections'
 import * as Articles from './add_article'
+import * as Delete_articles from './delete_article'
 
 // Coupon.loadCoupon()
 
