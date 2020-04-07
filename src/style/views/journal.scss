@@ -2,62 +2,110 @@
     background-image: url('../../assets/icons8-деньги-100.png');
 }
 
-.main {
-    padding: 0 150px 0 150px;
-    margin-bottom: 10px;
+.main_section {
+    .main {
+        padding: 0 150px 0 150px;
+        margin-bottom: 10px;
 
-    .main_item_arcticle{
-        width: 300px;
-        background-color: #fff;
-        cursor: pointer;
-        transition: 0.5s;
-        margin-bottom: 20px;
+        .main_item_arcticle{
+            width: 300px;
+            background-color: #fff;
+            cursor: pointer;
+            transition: 0.5s;
+            margin-bottom: 20px;
 
-        &:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-        }
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+            }
 
-        .article_img {
-            width: 100%;
-            height: 250px;
-            img {
-                display: block;
-                margin: auto;
+            .article_img {
                 width: 100%;
+                height: 250px;
+                img {
+                    display: block;
+                    margin: auto;
+                    width: 100%;
+                    height: 100%;
+                    object-position: center;
+                }
+            }
+
+            .article_info {
                 height: 100%;
-                object-position: center;
+                padding: 10px 10px 10px 10px;
+            }
+
+            .article_date {
+                width: 100%;
+                padding-left: 10px;
+                padding-bottom: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                border-top: 1px solid #eeeeeea6;
+
+                .calendar_icon {
+                    background-image: url('../../assets/icons8-календарь-100.png');
+                    width: 25px;
+                    height: 25px;
+                    background-size: cover;
+                    align-self: flex-start;
+                }
+
+                span {
+                    align-self: flex-start;
+                    font-size: 15px;
+                    padding-left: 5px;
+                    font-weight: 600;
+                }
             }
         }
+    }
 
-        .article_info {
-            height: 100%;
-            padding: 10px 10px 10px 10px;
-        }
+    .section_pagination {
+        padding: 0 150px 0 150px;
 
-        .article_date {
-            width: 100%;
-            padding-left: 10px;
-            padding-bottom: 5px;
+        #pagination {
             display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            border-top: 1px solid #eeeeeea6;
+            list-style-type:none;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            margin-top: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-top: 1px solid #8e9aa9;
+            border-bottom: 1px solid #8e9aa9;
+            li {
+                border: 1px solid #e5161e;
+                padding: 5px 10px;
+                font-size: 18px;
+                color: black;
+                cursor: pointer;
+                margin-right: 10px;
+                margin-bottom: 5px;
+                &:last-child {
+                    margin-right: 0;
+                }
 
-            .calendar_icon {
-                background-image: url('../../assets/icons8-календарь-100.png');
-                width: 25px;
-                height: 25px;
-                background-size: cover;
-                align-self: flex-start;
-            }
-
-            span {
-                align-self: flex-start;
-                font-size: 15px;
-                padding-left: 5px;
-                font-weight: 600;
+                &:hover, &.active {
+                    background-color: #e5161e;
+                    color: #fff;
+                }
             }
         }
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .main {
+        padding: 0 50px 0 50px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .main{
+        padding: 0 50px 0 50px;
     }
 }
