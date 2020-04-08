@@ -2,6 +2,7 @@ import '../../style/scss_style/style.scss'
 import '../../style/views/journal.scss'
 import Masonry from 'masonry-layout'
 import { Article } from '../article'
+import '../../style/scss_style/modal_article.scss'
 
 const main = document.querySelector('.main')
 const pagination = document.querySelector('#pagination')
@@ -33,7 +34,7 @@ function renderArticle(data) {
     const li = document.querySelectorAll('#pagination li')
 
     //TODO: фильтрацию на странице
-
+    filterArticles(db)
 
     //Показываем 1 страницу по загрузке.
     let endShow = 0 + numberOnPage
@@ -52,7 +53,6 @@ function renderArticle(data) {
             }
             e.target.classList.add('active')
             
-            
             let pageNum = + e.target.innerHTML
             let start = (pageNum - 1) *numberOnPage
             let end = start + numberOnPage
@@ -60,8 +60,6 @@ function renderArticle(data) {
             let articles = db.slice(start, end)
 
             main.innerHTML = ''
-            
-
             articles.forEach(el => {
                 show(el)
             })
@@ -83,11 +81,52 @@ function show(el) {
             <div class="calendar_icon"></div><span>${el[1].date}</span>
         </div>
     </article>`)
+    modalArticleShow(el[1].desc)
 
     let mnsry = new Masonry(main, {
         itemSelector: '.main_item_arcticle',
         columnWidth: '.main_item_arcticle',
+        stamp: '.modal_article',
         gutter: 20
     })
 }
 
+const filterJournal = document.querySelectorAll('.filter_journal')
+//Фукнция фильтрации статей
+function filterArticles(db) {
+    filterJournal.forEach(elem => {
+        elem.addEventListener('click', (e) => {
+            e.preventDefault()
+            const newFilterDb = []
+
+            db.forEach(el => {
+                if(el[1].category == e.target.innerText){
+                    newFilterDb.push(el)
+                }                
+            })
+
+            const liAll = document.querySelector('.link_all')
+            liAll.addEventListener('click', renderArticlesList)
+            
+            const li = document.querySelectorAll('#pagination li').forEach(el => {el.remove()})
+
+            main.innerHTML = ''
+            newFilterDb.forEach(el => {
+                show(el)
+            })
+        })
+    })
+}
+
+function modalArticleShow(el) {
+    const mainItemArcticle = document.querySelectorAll('.main_item_arcticle')
+    mainItemArcticle.forEach(elem => {
+        elem.addEventListener('click', (e) => {
+            e.preventDefault()
+            main.insertAdjacentHTML('beforeend', `<section class="modal_article">
+                ${el}
+            </section>`)
+        })
+    })
+}
+ 
