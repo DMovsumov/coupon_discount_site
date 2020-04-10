@@ -29,7 +29,7 @@ function getNotAccess() {
 }
 
 export function authWithEmailAndPassword(email, password) {
-    const apiKey = 'AIzaSyDc5-Nty4pljj-bQbB9YdCeYwW831RiWSo'
+    const apiKey = 'Your Api'
     return fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${apiKey}`, {
         method: 'POST',
         body: JSON.stringify({
