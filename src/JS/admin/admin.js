@@ -9,7 +9,7 @@ import * as Delete_articles from './delete_article'
 
 // Coupon.loadCoupon()
 
-// window.addEventListener('load', openModal())
+window.addEventListener('load', openModal())
 
 
 function openModal() {

@@ -7,8 +7,8 @@ const main = document.querySelector('body')
 
 modalLogin.classList.add('modal_login')
 
-// headerModule.style.display = 'none'
-// mainModule.style.display = 'none'
+headerModule.style.display = 'none'
+mainModule.style.display = 'none'
 
 export function LoginOnLoad() {
     main.insertAdjacentElement('afterbegin', modalLogin)
