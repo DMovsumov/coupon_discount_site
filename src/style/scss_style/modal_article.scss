@@ -1,7 +1,23 @@
 .modal_article {
     width: 100%;
+    display: block;
     background-color: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
+    padding: 5px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: .5s;
+
+    .header_article_show {
+        margin-bottom: 10px;
+    }
+
+    .close_article {
+        position: absolute;
+        top: 0;
+        right: 5px;
+        text-decoration: none;
+        font-size: 50px;
+        color: black;
+    }
 }

@@ -4,8 +4,10 @@ import Masonry from 'masonry-layout'
 import { Article } from '../article'
 import '../../style/scss_style/modal_article.scss'
 
-const main = document.querySelector('.main')
-const pagination = document.querySelector('#pagination')
+const mainSection = document.querySelector('.main_section')
+const main = mainSection.querySelector('.main')
+const pagination = mainSection.querySelector('#pagination')
+
 
 
 
@@ -34,7 +36,8 @@ function renderArticle(data) {
     const li = document.querySelectorAll('#pagination li')
 
     //TODO: фильтрацию на странице
-    filterArticles(db)
+    filterArticles(db, data)
+
 
     //Показываем 1 страницу по загрузке.
     let endShow = 0 + numberOnPage
@@ -63,25 +66,27 @@ function renderArticle(data) {
             articles.forEach(el => {
                 show(el)
             })
+            modalArticleShow(data)
         })
     })
+
+    modalArticleShow(data)
 }
 
 //Функция показа информации
 function show(el) {
-    main.insertAdjacentHTML('beforeend', `<article class="main_item_arcticle" category="${el[1].category}">
-        <div class="article_img">
+    main.insertAdjacentHTML('beforeend', `<article class="main_item_arcticle" data-id="${el[0]}" category="${el[1].category}">
+            <div class="article_img">
                 <img src="${el[1].img}" alt="">
-        </div>
+            </div>
             <div class="article_info">
                 <h3>${el[1].header}</h3>
                 <p>${el[1].subDesc}</p>
             </div>
             <div class="article_date">
-            <div class="calendar_icon"></div><span>${el[1].date}</span>
-        </div>
+                <div class="calendar_icon"></div><span>${el[1].date}</span>
+            </div>
     </article>`)
-    modalArticleShow(el[1].desc)
 
     let mnsry = new Masonry(main, {
         itemSelector: '.main_item_arcticle',
@@ -93,7 +98,7 @@ function show(el) {
 
 const filterJournal = document.querySelectorAll('.filter_journal')
 //Фукнция фильтрации статей
-function filterArticles(db) {
+function filterArticles(db, data) {
     filterJournal.forEach(elem => {
         elem.addEventListener('click', (e) => {
             e.preventDefault()
@@ -114,19 +119,36 @@ function filterArticles(db) {
             newFilterDb.forEach(el => {
                 show(el)
             })
+
+            modalArticleShow(data)
         })
     })
 }
 
-function modalArticleShow(el) {
+// Открытие статьи
+function modalArticleShow(data) {
     const mainItemArcticle = document.querySelectorAll('.main_item_arcticle')
     mainItemArcticle.forEach(elem => {
         elem.addEventListener('click', (e) => {
             e.preventDefault()
-            main.insertAdjacentHTML('beforeend', `<section class="modal_article">
-                ${el}
+            let id = elem.getAttribute('data-id')
+            console.log(data[id]);
+
+            main.style.display = 'none'
+            pagination.style.display = 'none'
+            mainSection.insertAdjacentHTML('beforeend', `<section class="modal_article">
+                <h1 class="header_article_show"><strong>${data[id].header}</strong></h1>
+                ${data[id].desc}
+                <a href="" class="close_article">&times;</a>
             </section>`)
+
+            const closeArticle = document.querySelector('.close_article').addEventListener('click', (e) => {
+                e.preventDefault()
+                e.target.parentElement.remove()
+                main.style.display = 'block'
+                pagination.style.display = 'flex'
+            })
         })
     })
 }
- 
+

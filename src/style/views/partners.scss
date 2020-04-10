@@ -169,3 +169,117 @@
         background-image: url('../../assets/icon-ads.png');
     }
 }
+
+@media (min-width: 1200px) and (max-width: 1400px){
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .main {
+        .main_bot {
+            .main-rules {
+                h3 {
+                    font-size: 2vmax;
+                    color: #8e8e93;
+                    margin-bottom: 10px;
+                }
+                h2 {
+                    font-size: 2vmax;
+                    margin-bottom: 20px;
+                    color: black;
+                }
+    
+                span {
+                    font-size: 1.5vmax;
+                }
+                .rules_enter {
+                    font-size: 2vmax;
+                    font-weight: 800;
+                    color: black;
+                }
+                .main_rules-list {
+                    font-size: 2vmax;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .main {
+        .main_bot {
+            .main-rules {
+                h3 {
+                    font-size: 3vmax;
+                }
+                h2 {
+                    font-size: 3vmax;
+                }
+    
+                span {
+                    font-size: 2vmax;
+                }
+                .rules_enter {
+                    font-size: 2vmax;
+                }
+                .main_rules-list {
+                    font-size: 3vmax;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .main {
+        .main_centr {
+            padding: 0 50px 0 50px;
+
+            .main_centr-block_layout {
+                color: black;
+                padding-top: 10px;
+                padding-bottom: 20px;
+                
+                .small {
+                    color: #8e8e93;
+                }
+    
+                h2 {
+                    margin-bottom: 20px;
+                }
+                .main_centr-blok_text {
+    
+                    .partnersBenefits {
+                        list-style-type: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+
+        .main_bot {
+            padding: 0 20px 0 20px;
+            .main-rules {
+                h3 {
+                    font-size: 5vmax;
+                }
+                h2 {
+                    font-size: 4vmax;
+                }
+    
+                span {
+                    font-size: 3vmax;
+                }
+                .rules_enter {
+                    font-size: 3vmax;
+                }
+                .main_rules-list {
+                    font-size: 5vmax;
+                }
+            }
+        }
+    }
+}

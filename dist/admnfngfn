@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SkidWood Панель Администратора</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src='https://cdn.tiny.cloud/1/j31pvme1igrxs5fa2k4zrz1uo7qugqb4z7etehx9nwlpdyhq/tinymce/5/tinymce.min.js' referrerpolicy="origin">
+    </script>
+    <script>
+      tinymce.init({
+        selector: '#mytextarea'
+      });
+    </script>
+<link href="admin.71adcdee92785988cb4b.css" rel="stylesheet"></head>
+
+<body>
+    <header class="header">
+        <section class="header_admin">
+            <h1>Панель администратора</h1>
+            <div class="header_admin-info">
+                <span class="header_role">Администратор:</span>
+                <span class="header_name">Admin</span>
+            </div>
+        </section>
+        <section class="header_menu">
+            <a href="#" class="header_menu_btn" id="menu_btn">
+                <div class="header_menu-arrow"></div>
+            </a>
+            <nav class="header_nav-list">
+                <a href="">SkidWood</a>
+                <a href="">SkidWood journal</a>
+                <a href="">Email</a>
+            </nav>
+        </section>
+    </header>
+
+    <main class="main">
+        <section class="skidwood_site">
+            <header class="header_skidwood_site">
+                <nav class="header_skidwood_site-nav">
+                    <a href="" id="skidwood_add_coupon">Добавить купон</a>
+                    <a href="" id="skidwood_delete_coupon">Удалить купон</a>
+                    <a href="" id="skidwood_add_collections">Добавить/удалить подборку</a>
+                    <a href="" id="skidwood_add_slider">Добавить/удалить слайд</a>
+                </nav>
+            </header>
+
+
+            <section class="main_add-coupon notShow">
+                <form action="" class="add_coupon_skidwood" id="form_add_coupon">
+                    <input type="text" class="shop input" placeholder="Название магазина" minlength="2">
+                    <select name="type" class="type select_type" id="select_type">
+                        <option value="Акция">Акция</option>
+                        <option value="Купон">Купон</option>
+                    </select>
+                    <select name="type" class="category select_category" id="select_category">
+                        <option value="Техника">Техника</option>
+                        <option value="Развлечения">Развлечения</option>
+                        <option value="Финансы">Финансы</option>
+                        <option value="Путешествия">Путешествия</option>
+                        <option value="Товары">Товары</option>
+                        <option value="Услуги">Услуги</option>
+                        <option value="CashBack">CashBack</option>
+                        <option value="Онлайн магазины">Онлайн магазины</option>
+                        <option value="Авто">Авто</option>
+                        <option value="Обучение">Обучение</option>
+                        <option value="Еда">Еда</option>
+                        <option value="Спорт">Спорт</option>
+                        <option value="Азарт">Азарт</option>
+                        <option value="Для взрослых">Для взрослых</option>
+                    </select>
+                    <input type="text" class="promocode" id="promocode" placeholder="Введите промокод" disabled>
+                    <input type="text" class="sub_сategory input" placeholder="Подкатегория купона" minlength="2">
+                    <select name="type" class="country select_country" id="select_country">
+                        <option value="Россия">Россия</option>
+                        <option value="Украина">Украина</option>
+                        <option value="Беларусь">Беларусь</option>
+                        <option value="Казахстан">Казахстан</option>
+                    </select>
+                    <input type="url" class="url input" placeholder="Ссылка на сайт">
+                    <input type="text" class="type_info input" placeholder="Краткая информация купона" minlength="2">
+                    <input type="text" class="subdesc input" placeholder="Краткое описание купона" minlength="2">
+                    <textarea type="text" class="desc input" placeholder="Описание купона" name="" cols="30"
+                        rows="10"></textarea>
+                    <input type="date" name="" class="date input">
+                    <input type="url" class="img input" placeholder="Ссылка на картинку магазина">
+
+                    <div class="skidwood_collections">
+                    </div>
+                    <button type="submit" class="add_submit" id="submit_add" disabled>Добавить купон</button>
+                </form>
+                <div class="coupon_help"></div>
+            </section>
+
+            <section class="main_delete_coupon notShow">
+                <header class="main_delete_coupon_header">
+                </header>
+
+                <main class="main_delete_coupon_load">
+                    <table class="delete_load_table" id="delete_table">
+                        <tr class="coupon_table header_table">
+                            <th>#</th>
+                            <th>Страна</th>
+                            <th>Магазин</th>
+                            <th>Тип купона</th>
+                            <th>Категория</th>
+                            <th>Подкатегория</th>
+                            <th>Промокод</th>
+                            <th>Краткая информация купона</th>
+                            <th>Краткое описание купона</th>
+                            <th>Ссылка на магазин</th>
+                            <th>Дата действия</th>
+                        </tr>
+                    </table>
+                </main>
+            </section>
+
+            <section class="main_add_category notShow">
+                <form action="" class="main_add_category-add" id="category_add">
+                    <h2>Добавить категорию</h2>
+                    <div class="add_category_block">
+                        <input type="text" class="main_add_category_name" placeholder="Название подборки" minlength="2">
+                        <button class="main_add_category_plus main_add_category_icon"></button>
+                    </div>
+                    <button type="submit" id="submit_category" disabled>Добавить подборку</button>
+                </form>
+                <div class="main_add_category-all_category">
+                    <h2>Все категории</h2>
+                </div>
+            </section>
+
+            <section class="main_add_slider notShow">
+                <form action="" class="main_add_slider-form" id="add_slide-form">
+                    <h1>Добавить новый слайд</h1>
+                    <input type="text" placeholder="Введите название для слайда" class="input_slide">
+                    <input type="text" placeholder="Введите описание слайда" class="input_slide">
+                    <input type="url" placeholder="Введите ссылку на картинку слайда" class="input_slide">
+                    <input type="url" placeholder="Введите ссылку на магазин" class="input_slide">
+                    <input type="date" name="" id="" class="input_slide">
+                    <button type="submit" id="submit_slide" disabled>Добавить слайд</button>
+                </form>
+                <div class="main_add_slider-all_slider">
+                    <h1>Удалить слайд</h1>
+                    <table class="delete_slider-table" id="delete_slide">
+                        <tr class="slide_table">
+                            <th>#</th>
+                            <th>Магазин</th>
+                            <th>Краткое описание купона</th>
+                            <th>Ссылка на картинку</th>
+                            <th>Ссылка на магазин</th>
+                            <th>Дата действия</th>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </section>
+
+        <section class="skidwood_journal">
+            <header class="skidwood_journal_header">
+                <nav class="header_skidwood_journal-nav">
+                    <a href="">Написать статью</a>
+                    <a href="">Удалить статью</a>
+                </nav>
+            </header>
+
+            <section class="add_article">
+                <form action="" id="add_article_form">
+                    <input type="text" placeholder="Введите заголовок статьи" minlength="2">
+                    <input type="text" placeholder="Введите краткую информацию отображаемой статьи" minlength="5">
+                    <input type="url" placeholder="Введите url картинки">
+                    <select name="type" id="select_category">
+                        <option value="Техника">Техника</option>
+                        <option value="Развлечения">Развлечения</option>
+                        <option value="Финансы">Финансы</option>
+                        <option value="Путешествия">Путешествия</option>
+                        <option value="Товары">Товары</option>
+                        <option value="Услуги">Услуги</option>
+                        <option value="CashBack">CashBack</option>
+                        <option value="Онлайн магазины">Онлайн магазины</option>
+                        <option value="Авто">Авто</option>
+                        <option value="Обучение">Обучение</option>
+                        <option value="Еда">Еда</option>
+                        <option value="Спорт">Спорт</option>
+                        <option value="Азарт">Азарт</option>
+                        <option value="Для взрослых">Для взрослых</option>
+                        <option value="Для взрослых">Заработок</option>
+                    </select>
+                    <textarea id="mytextarea" name="mytextarea">
+                        Hello, World!
+                    </textarea>                    
+                    <button type="submit" id="submit_form_article" disabled>Отправить</button>
+                </form>
+            </section>
+
+            <section class="delete_article">
+                <ul class="delete_article_items">
+                </ul>
+                <ul id="pagination">
+                </ul>
+            </section>
+        </section>
+    </main>
+
+
+    <script src="https://kit.fontawesome.com/b06e20d485.js" crossorigin="anonymous"></script>
+    </script>
+<script type="text/javascript" src="admin.9081c0f116931356a982.js"></script><script type="text/javascript" src="admin_analitic.ec482cec5cc631dd5bb5.js"></script></body>
+
+</html>

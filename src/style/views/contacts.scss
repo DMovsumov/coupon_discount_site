@@ -71,7 +71,6 @@
 
             .icon_wk {
                 background-image: url('../../assets/icon_wk.png');
-        
             }
             .icon_instagram{
                 background-image: url('../../assets/icon_instagram.png');
@@ -81,6 +80,76 @@
             }
             .icon_yandex_dzen{
                 background-image: url('http://cache-mskstoredata02.cdn.yandex.net/download.cdn.yandex.net/from/yandex.ru/support/ru/zen/files/zen-icon.svg');
+            }
+
+            .icon_telegram {
+                background-image: url('../../assets/icons8-телеграмма-app-480.png');
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px){
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .main {
+        .main_contacts-logo {
+            margin: 20px 20px 40px 100px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .main {
+        .main_contacts-logo {
+            margin: 20px 20px 40px 20px;
+
+            height: 300px;
+            width: 300px;
+
+            .offer_btn {
+                font-size: 3vmax;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .main {
+        flex-direction: column;
+
+        .main_contacts-logo {
+            margin: 20px 0px 40px 0px;
+            height: 300px;
+            width: 300px;
+
+            .offer_btn {
+                font-size: 3vmax;
+            }
+        }
+
+        .main_contacts {
+            margin-left: 10px;
+            margin-right: 10px;
+
+            .main_info{
+                input {
+                    font-size: 20px;
+                }
+            }
+
+            .footer_socials_icons {
+                display: flex;
+                justify-content: space-between;
+                a {
+                    background-size: cover;
+                    height: 50px;
+                    width: 50px;
+                    padding-right: 20px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                }
             }
         }
     }

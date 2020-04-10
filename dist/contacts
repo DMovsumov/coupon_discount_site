@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SkidWood</title>
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Open+Sans|Vast+Shadow&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/ico">
+<link href="contacts.17d40b68691e6acaaf7c.css" rel="stylesheet"></head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <a href="about_service" class="header_top-nav_link link service">О сервисе</a>
+            <a href="partners" class="header_top-nav_link link partner">Стать партнером</a>
+            <a href="#" class="header_top-nav_link link contacts">Контакты</a>
+        </div>
+
+        <div class="header-main">
+            <div class="header-left">
+                <a href="" class="logo_image"></a>
+                <div class="logo_text_name"><a href="">SkidWood.ru</a><span class="logo_text_desc">Выгодные акции, бесплатные купоны и не только</span>
+            </div>
+                        
+        </div>
+    </header>
+    <section class="main">
+        <div class="main_contacts-logo">
+            <button class="offer_btn">Связаться</button>
+        </div>
+        <div class="main_contacts">
+            <h1>Контакты</h1>
+            <span>Для того чтобы свзяться с нами воспользуйтесь формой или напишите нам на почту:</span>
+            <div class="main_info">
+                <input type="email" value="skidwood.com@gmail.com" readonly="readonly">
+            </div>
+            <span>Мы в соц. сетях:</span>
+            <div class="footer_socials_icons">
+                <a href="https://zen.yandex.ru/id/5e836a90862a504fb17aff48" class="icon_yandex_dzen"></a>
+                <a href="https://www.instagram.com/SkidWood_com/" class="icon_instagram"></a>
+                <a href="https://vk.com/skidwoods" class="icon_wk"></a>
+                <a href="https://t.me/skidwood" class="icon_telegram"></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer_advantages">
+            <div class="footer_economy">
+                <div class="footer_icon icon_economy"></div>
+                <span class="footer_advanteges-text"><strong>43%</strong><br> Такое количество денег в среднем экономят пользователи SkidWood на покупках</span>
+            </div>
+            <div class="footer_sale-offers">
+                <div class="footer_icon icon_sale-offers"></div>
+                <span class="footer_advanteges-text">Всегда актуальные скидки и предложения</span>
+            </div>
+            <div class="footer_private-information">
+                <div class="footer_icon icon_private-information"></div>
+                <span class="footer_advanteges-text">Экслюзивные предложение которые вы нигде больше не найдете</span>
+            </div>
+            <div class="footer_free-coupons">
+                <div class="footer_icon icon_free-coupons"></div>
+                <span class="footer_advanteges-text">Бесплатные купоны и промокоды</span>
+            </div>
+        </div>
+
+        <div class="footer_socials">
+            <div class="footer_social_block">
+                <div class="footer_logo_block">
+                    <a href="" class="footer_logo logo_image"></a>
+                    <div class="footer_logo_text_name"><a href="">SkidWood.ru</a>
+                        <span class="logo_text_desc">Выгодные акции, бесплатные купоны и не только</span>
+                    </div>
+                </div>
+                <div class="footer_socials_icons">
+                    <a href="" class="icon_yandex_dzen"></a>
+                    <a href="https://www.instagram.com/SkidWood_com/" class="icon_instagram"></a>
+                    <a href="https://vk.com/skidwoods" class="icon_wk"></a>
+                    <a href="https://t.me/skidwood" class="icon_telegram"></a>
+                </div>
+            </div>
+
+            <div class="footer_company">
+                <div class="footer_aboutus">
+                  <a href="">О сервисе</a> 
+                </div>
+                <div class="footer_partners">
+                    <a href="">Стать партнером</a>
+                </div>
+            </div>
+
+            <div class="footer_helps">
+                <h1>Помощь</h1>
+                <details class="footer_hepls_coupon">
+                    <summary>Как использовать купон или промокод?</summary>
+                    Чтобы использовать купон или промокод, вам необходимо навести и нажать на купон и в всплывающем окошке скопировать номер купона. Затем перейти в магазин и использовать данный купон.
+                </details>
+                <details class="footer_helps_action">
+                    <summary>Разница между купоном и акцией?</summary>
+                    Разница между акцией и купонами с промокодами заключается в том, что для того чтобы воспользоваться акцией вам необходимо просто нажать на нее и перейти в магазин в новом окне, а для того чтобы воспользоваться купоном или промокодом необходимо скопировать номер купона или промокода и ввести его на сайте где он участвует
+                </details>
+            </div>
+        </div>
+    </footer>
+<script type="text/javascript" src="contacts.5540b3249bae89515ca3.js"></script></body>
